@@ -10,9 +10,10 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C#");
-
-            Console.ReadLine();
+           Console.WriteLine("Hello C#");
+           Console.Write("Hello Again with 4 line break\n\n\n\n");
+           Console.Write("saygin guven");
+           Console.ReadLine();
         }
     }
 }
