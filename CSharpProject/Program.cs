@@ -10,10 +10,23 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-           Console.WriteLine("Hello C#");
-           Console.Write("Hello Again with 4 line break\n\n\n\n");
-           Console.Write("saygin guven");
-           Console.ReadLine();
+            // this is single line comment
+            /****************************** 
+             
+               this is multi line comment
+               boolean value is true or false.
+               you have to initialize boolean value before using it
+             
+             ****************************/
+            bool booleanVar = false;
+            Console.WriteLine("the boolenVar value is either {0} or {1}", booleanVar,!booleanVar);
+            Console.WriteLine("the boolenVar value is either " + booleanVar + " or " + !booleanVar);
+            Console.WriteLine($"the boolenVar value is either {booleanVar} or {!booleanVar}");
+
+
+
+
+            Console.ReadLine();
         }
     }
 }
