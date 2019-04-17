@@ -1,0 +1,7 @@
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\bin\Debug\CSharpProject.exe.config
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\bin\Debug\CSharpProject.exe
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\bin\Debug\CSharpProject.pdb
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.csprojAssemblyReference.cache
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.csproj.CoreCompileInputs.cache
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.exe
+C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.pdb
