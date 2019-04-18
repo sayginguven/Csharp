@@ -10,9 +10,8 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            Variables.body();
-
-
+            //Variables.body();
+            OtherVariables.body();
         }
     }
 }
