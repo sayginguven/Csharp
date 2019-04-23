@@ -11,7 +11,8 @@ namespace CSharpProject
         static void Main(string[] args)
         {
             //Variables.body();
-            OtherVariables.body();
+            //OtherVariables.body();
+            MathLibrary.body();    
         }
     }
 }
