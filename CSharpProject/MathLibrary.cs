@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpProject
 {
-    public class MathLibrary
+    class MathLibrary
     {
         public static void body() {
 
@@ -27,6 +27,7 @@ namespace CSharpProject
 
             Console.WriteLine($"compare 2 numbers 5 and 10 and return max {Math.Max(5,10)}");
             Console.WriteLine($"compare 2 numbers 5 and 10 and return min {Math.Min(5,10)}");
+
 
             
         }
