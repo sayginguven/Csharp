@@ -38,6 +38,26 @@ namespace CSharpProject
             string stringYear = year.ToString();
             string last2Digits = stringYear.Substring(2,2);
             Console.WriteLine(last2Digits);
+
+            //operations 
+            // +  - *  / %
+            Console.WriteLine("1 + 2 = "   + (1 + 2)); //3
+            Console.WriteLine("10 - 5  = " + (10 -5)); // 5
+            Console.WriteLine("5 * 8  = "  + (5 * 8)); // 40
+            Console.WriteLine("10 / 2 = "  + (10 / 2)); // 5
+            Console.WriteLine("10 % 4 = "  + (18 % 4)); // 2
+
+            Console.WriteLine("10 + 5 * 3 = " + (10 + 5 * 3)); //25 
+            Console.WriteLine("(10 + 5) * 3 = " + ((10 + 5) * 3)); // 45
+
+            int number1 = 17;
+            int number2 = 3;
+
+            //casting to double
+            double calculationDivide = (double)number1 / number2;
+
+            Console.WriteLine("calculationDivide = number1 / number2 = " +
+                Math.Round(calculationDivide, 2));
         }
     }
 }
