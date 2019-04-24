@@ -252,6 +252,20 @@ namespace CSharpProject
 
 
             }
+
+
+            //ternary operator
+            // ? : operator
+            // short if
+
+            string adultOrNot; // "adult" // "not adult" 
+
+            int age = 25;
+
+            adultOrNot = (age > 18) ? "adult" : "not adult";
+
+            Console.WriteLine($"your age is {age} and you are {adultOrNot}");
+
         }
     }
 }
