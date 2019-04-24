@@ -255,16 +255,18 @@ namespace CSharpProject
 
 
             //ternary operator
-            // ? : operator
-            // short if
+            if (!true) {
+                // ? : operator
+                // short if
 
-            string adultOrNot; // "adult" // "not adult" 
+                string adultOrNot; // "adult" // "not adult" 
 
-            int age = 25;
+                int age = 25;
 
-            adultOrNot = (age > 18) ? "adult" : "not adult";
+                adultOrNot = (age > 18) ? "adult" : "not adult";
 
-            Console.WriteLine($"your age is {age} and you are {adultOrNot}");
+                Console.WriteLine($"your age is {age} and you are {adultOrNot}");
+            }
 
         }
     }

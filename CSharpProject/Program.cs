@@ -15,7 +15,6 @@ namespace CSharpProject
             //MathLibrary.body();
             //ConvertingTypes.body();
             //ConditionalStatements.body();
-
             Loops.body();
         }
     }
