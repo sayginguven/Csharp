@@ -102,6 +102,73 @@ namespace CSharpProject
                 }
             }
 
+            //while loop
+            if (!true)
+            {
+                int i=0;
+                while (i < 10)
+                {
+                    Console.WriteLine(i);
+                    i += 1;
+                }
+
+                i = 10;
+                while(i >0){
+                    i -= 1;
+                    if (i == 5) continue;
+                    Console.WriteLine(i);
+                }
+
+            }
+
+            if (true)
+            {
+                int userInput=0, total=0, counter=0;
+
+                Console.WriteLine("AVERAGE NUMBER CALCULATOR");
+                while (userInput != -1)
+                {
+                    Console.Write($"What is the number # {counter+1}? ");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    bool parseOk = int.TryParse(Console.ReadLine(), out userInput);
+                    if (parseOk)
+                    {
+                        if (userInput > 100) {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("the max is 100! please try again");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            continue;
+                        }
+
+                        if (userInput< -1)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("the min number is 0! press -1 to exit. please try again");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            continue;
+                        }
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (userInput == -1) break;
+                        total += userInput;
+                        counter += 1;
+                    }
+                    else {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("thats not a number!");
+                        Console.ForegroundColor = ConsoleColor.White;
+
+                    }
+
+                }
+                //todo
+                //calculate the average
+                Console.Write($"You have provided {counter} numbers and the average is: ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"{ Math.Round((double)total / counter, 2)}");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                Console.WriteLine("\n\n\n");
+            }
 
         }
     }
