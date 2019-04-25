@@ -10,7 +10,6 @@ namespace CSharpProject
     {
         public static void body()
         {
-
             //for loop
             if (!true)
             {
@@ -121,7 +120,8 @@ namespace CSharpProject
 
             }
 
-            if (true)
+            //average number calculator 
+            if (!true)
             {
                 int userInput=0, total=0, counter=0;
 
@@ -168,6 +168,24 @@ namespace CSharpProject
                 Console.ForegroundColor = ConsoleColor.White;
 
                 Console.WriteLine("\n\n\n");
+            }
+
+            //do while loop 
+            if (!true)
+            {
+                int a = 1;
+                while (a > 10) {
+                    Console.WriteLine(a + " is a great number");
+                    a += 10;
+                }
+
+                //do while loop will run at least 1 time no matter what is the while condition
+                int b = 1;
+                do
+                {
+                    Console.WriteLine(b + " is a great number");
+                    b += 1;
+                } while (b >10);
             }
 
         }

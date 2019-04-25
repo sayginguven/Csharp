@@ -253,7 +253,6 @@ namespace CSharpProject
 
             }
 
-
             //ternary operator
             if (!true) {
                 // ? : operator
