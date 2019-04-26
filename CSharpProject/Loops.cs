@@ -171,7 +171,7 @@ namespace CSharpProject
             }
 
             //do while loop 
-            if (!true)
+            if (true)
             {
                 int a = 1;
                 while (a > 10) {
