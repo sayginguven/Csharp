@@ -11,6 +11,12 @@ namespace CSharpProject
         public static void body() {
 
 
+            Console.WriteLine("give me a number");
+            string a = Console.ReadLine();
+            int number = int.Parse(a);
+            Console.WriteLine(Math.Sqrt(number)+ "!");
+
+
             //array
             if (!true)
             {
@@ -128,17 +134,15 @@ namespace CSharpProject
 
                 Console.WriteLine(fourD[0, 1, 2, 2]);//1111
             }
-
+            
             //initilize 2d array
-            if (!true)
+            if (true)
             {
-                float[,] floarArr = new float[5, 7];
+                float[,] floarArr = new float[2, 5];
 
                 Console.WriteLine($"the length of floatArr is : {floarArr.Length}");
                 Console.WriteLine($"the length of floatArr[i] is : {floarArr.GetLength(0)}");
                 Console.WriteLine($"the length of floatArr[j] is : {floarArr.GetLength(1)}");
-
-
 
                 for (int i = 0; i < floarArr.GetLength(0); i += 1)
                 {
@@ -156,6 +160,8 @@ namespace CSharpProject
                         Console.WriteLine($"floatArr[{i},{j}] = {floarArr[i, j]}");
                     }
                 }
+
+
             }
 
 
