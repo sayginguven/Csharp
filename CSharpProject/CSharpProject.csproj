@@ -54,6 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="Loops.cs" />
     <Compile Include="MathLibrary.cs" />
     <Compile Include="OtherVariables.cs" />
