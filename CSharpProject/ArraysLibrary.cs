@@ -11,11 +11,14 @@ namespace CSharpProject
         public static void body() {
 
 
-            Console.WriteLine("give me a number");
-            string a = Console.ReadLine();
-            int number = int.Parse(a);
-            Console.WriteLine(Math.Sqrt(number)+ "!");
-
+            //read line and sruare root the number
+            if (!true)
+            {
+                Console.WriteLine("give me a number");
+                string a = Console.ReadLine();
+                int number = int.Parse(a);
+                Console.WriteLine(Math.Sqrt(number) + "!");
+            }
 
             //array
             if (!true)
@@ -136,7 +139,7 @@ namespace CSharpProject
             }
             
             //initilize 2d array
-            if (true)
+            if (!true)
             {
                 float[,] floarArr = new float[2, 5];
 
@@ -164,6 +167,59 @@ namespace CSharpProject
 
             }
 
+
+            //creating jagged array
+            //its not 2d array, its array of arrays [ [], [] ,[] ]
+            int[][] jaggedArr = new int[3][];
+
+            jaggedArr[0] = new int[5] { 1, 2, 3, 4, 5 };
+            jaggedArr[1] = new int[7] { 100, 44, 1224, 1241, 76245, 7737, 145 };
+            jaggedArr[2] = new int[2] { 99, 84 };
+
+            string[][] jaggedArrString = new string[4][] {
+                new string[] { "apple", "banana", "mango"},
+                new string[] { "brocoli", "carrot", "beans"},
+                new string[] { "cashews", "nuts"},
+                new string[] { "rice", "kebab", "ramen", "spagetti", "kimchi", "T-bone", "steak"}
+            };
+
+            //print all elements
+            Functions.greetings("jaggedArrString and these are my elements", ConsoleColor.Blue);
+            for (int j = 0; j < jaggedArrString.Length; j++)
+            {
+                for (int i = 0; i < jaggedArrString[j].Length; i++)
+                {
+                    Console.Write(jaggedArrString[j][i] + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            //access to the jagged array element
+            Console.Write("the value of jaggedArrString[3][4] : ");
+            Console.WriteLine(jaggedArrString[3][4]);//kimchi
+
+            //2d jagged array one array. each array element has 2d arrays 
+            // [ [,] , [,] , [,] , [,] ]
+            double[][,] twoDjaggedArray = new double[4][,] {
+                new double[2,5] { 
+                    { 2.1d,5.3d,7.1d,9.2d,7.5d },
+                    { 2.8d, 5.2d, 7.6d, 9.9d, 7.2d }
+                },
+                new double[1,5] { 
+                    { 5.2d,2.5d,6.7d,9.1d,1.7d }
+                },
+                new double[2,6] { 
+                    { 9.2d,8.5d,5.7d,1.9d,4.7d,7.4d },
+                    { 1.8d, 1.2d, 9.5d, 7.7d, 8.9d, 4.7d }
+                },
+                new double[2,5] { 
+                    { 2.9d,0.5d,8.7d,2.9d,7.7d },
+                    { 2.2d, 1.5d, 0.7d, 9.2d, 7.1d }
+                },
+            };
+
+            Console.WriteLine(twoDjaggedArray[2][1,4]);//??
 
         }
 

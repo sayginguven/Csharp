@@ -65,7 +65,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="name">user name</param>
         /// <param name="color">default parameter color is white</param>
-        private static void greetings(string name, ConsoleColor color = ConsoleColor.White)
+        public static void greetings(string name, ConsoleColor color = ConsoleColor.White)
         {
             Console.ForegroundColor = color;
             Console.WriteLine($"hello my name is {name}");

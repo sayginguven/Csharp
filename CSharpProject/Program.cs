@@ -17,7 +17,7 @@ namespace CSharpProject
             //ConditionalStatements.body();
             //Loops.body();
             //ArraysLibrary.body();
-            Functions.body();
+            //Functions.body();
 
         }
 
