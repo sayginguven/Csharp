@@ -59,6 +59,42 @@ namespace CSharpProject
 
             goodbye("everybody");
 
+            //pass by value
+            int number1 = 10;
+            Console.WriteLine($"before calling the function the number value is {number1}");
+            Console.WriteLine($"the value inside the function is {Functions.incrementTheValue(number1)}");
+            Console.WriteLine($"after calling the function the number value is {number1}");
+
+            double balance = 1000;
+            Console.WriteLine($"before calling the function the balance is {balance}");
+            Console.WriteLine($"the value inside the function is {Functions.transferTenDolars(ref balance)}");
+            Console.WriteLine($"after ccalling the function the balance is {balance}");
+
+
+
+            //pass by reference
+            double rad = 5.2d; // radius
+            double pi = 3d;
+
+            double pi2 = 3.141592d;
+            //Console.WriteLine(Math.PI);
+            Console.WriteLine(calculateCircleArea(rad, pi));//pi is 3 
+            Console.WriteLine(calculateCircleArea(rad, pi2));// more precise result
+
+            //thats a constant value 
+            const string ipNumber = "199.23.243.103";
+            //ipNumber = ""; // compile error
+
+            int studentId;
+            giveAnId(out studentId);
+            studentId = 101;//you can modify later its not a constant value
+            Console.WriteLine(studentId);
+
+            //https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters
+            //in specifies that this parameter is passed by reference but is only read by the called method.
+            //ref specifies that this parameter is passed by reference and may be read or written by the called method.
+            //out specifies that this parameter is passed by reference and is written by the called method.
+
         }
         /// <summary>
         /// print the value with a selected color
@@ -77,7 +113,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="name">user name</param>
         /// <param name="school">default parameter is ITD</param>
-        private static void sayWelcome(string name, string school = "ITD")
+        public static void sayWelcome(string name, string school = "ITD")
         {
             Console.WriteLine($"hello {name}, welcome to {school}");
         }
@@ -90,7 +126,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        private static double add(double a, double b)
+        public static double add(double a, double b)
         {
             return a + b;
         }
@@ -104,7 +140,7 @@ namespace CSharpProject
         /// <param name="b"></param>
         /// <param name="c"></param>
         /// <returns></returns>
-        private static double add(double a, double b, double c)
+        public static double add(double a, double b, double c)
         {
             return a + b + c;
         }
@@ -115,7 +151,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="args">list of double values</param>
         /// <returns></returns>
-        private static double add(params double[] args)
+        public static double add(params double[] args)
         {
 
             StringBuilder sb = new StringBuilder();
@@ -142,7 +178,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        private static double multiply(double a, double b)
+        public static double multiply(double a, double b)
         {
             return a * b;
         }
@@ -153,7 +189,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        private static double subtract(double a, double b)
+        public static double subtract(double a, double b)
         {
             return a - b;
         }
@@ -164,7 +200,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        private static double divide(double a, double b)
+        public static double divide(double a, double b)
         {
             return a / b;
         }
@@ -305,6 +341,30 @@ namespace CSharpProject
 
         //one line of scope alternative method
         public static void goodbye(string str) => Console.WriteLine("goodbye " + str);
+
+
+        //pass by value
+        public static int incrementTheValue(int a) {
+            a += 1;
+            return a;
+        }
+        //pass by reference
+        public static double transferTenDolars(ref double money) {
+            money -= 10.0;
+            return money;
+        }
+
+        //pi value is constant will not change
+        public static double calculateCircleArea(double radius, in double pi)
+        {
+            return pi * radius * radius;
+        }
+
+        //id must be initialized inside the method
+        public static void giveAnId(out int id)
+        {
+            id = 100;
+        }
 
     }
 }

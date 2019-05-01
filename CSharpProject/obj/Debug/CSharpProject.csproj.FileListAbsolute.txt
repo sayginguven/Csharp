@@ -5,5 +5,3 @@ C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProj
 C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.csproj.CoreCompileInputs.cache
 C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.exe
 C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.pdb
-C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.Form1.resources
-C:\Users\saygin.guven\Documents\CSharpProject\CSharpProject\obj\Debug\CSharpProject.csproj.GenerateResource.cache
