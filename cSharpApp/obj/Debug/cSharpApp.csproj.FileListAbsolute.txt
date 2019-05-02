@@ -1,0 +1,13 @@
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\cSharpApp.exe.config
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\cSharpApp.exe
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\cSharpApp.pdb
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\CSharpProject.exe
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\CSharpProject.pdb
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\bin\Debug\CSharpProject.exe.config
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.csprojAssemblyReference.cache
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.Properties.Resources.resources
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.csproj.GenerateResource.cache
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.csproj.CoreCompileInputs.cache
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.csproj.CopyComplete
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.exe
+C:\Users\saygin.guven\Documents\CSharpProject\cSharpApp\obj\Debug\cSharpApp.pdb

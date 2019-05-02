@@ -407,6 +407,49 @@ namespace CSharpProject
 
         }
 
+        public static int addArrayElements(int[] arr) {
+
+            int sum = 0;
+
+            foreach (var item in arr)
+            {
+                sum += item;
+            }
+
+            return sum;
+        }
+
+        public static void printFactors(int n) {
+
+            if (n < 1) {
+                Console.WriteLine("Invalid Value");
+            }
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0) {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+
+        public static bool isPerfectNumber(int n) {
+            if (n < 1) return false;
+            if (n == 1) return true;
+            
+            int sum = 0;
+
+            for (int i = 1; i <= n/2; i++)
+                if (n % i == 0) sum += i;
+
+            if (sum == n) return true;
+            else return false;
+        }
+
+        public static bool isPrime(int number) {
+            //TODO implement this
+            return false;
+        }
 
     }
 }

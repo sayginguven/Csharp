@@ -1,0 +1,13 @@
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\CSharpProject.exe
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\CSharpProject.pdb
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\bin\Debug\CSharpProject.exe.config
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\saygin.guven\Documents\CSharpProject\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
