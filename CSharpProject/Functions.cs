@@ -95,7 +95,19 @@ namespace CSharpProject
             //ref specifies that this parameter is passed by reference and may be read or written by the called method.
             //out specifies that this parameter is passed by reference and is written by the called method.
 
+            Console.WriteLine($"The factorial(-10) is {Functions.factorial(-10)}");
+            Console.WriteLine($"The factorial(1) is {Functions.factorial(1)}");
+            Console.WriteLine($"The factorial(2) is {Functions.factorial(2)}");
+            Console.WriteLine($"The factorial(10) is {Functions.factorial(10)}");
+
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine($"fibonacci({i}) = {Functions.fibo(i)}");
+            }
         }
+
+    
+
         /// <summary>
         /// print the value with a selected color
         /// </summary>
@@ -365,6 +377,36 @@ namespace CSharpProject
         {
             id = 100;
         }
+
+
+        //recursive functions
+        public static int factorial(int number) {
+            if (number <= 0) {
+                return -1;
+
+            }else if  (number == 1) {
+                return 1;
+            }
+            else {
+                return number * factorial(number - 1);
+            }
+        }
+
+        //fibonacci series
+        public static long fibo(int number) {
+
+            if (number == 0) {
+                return 0;
+            }
+
+            if (number == 1) {
+                return 1;
+            }
+
+            return fibo(number - 1) + fibo(number - 2);
+
+        }
+
 
     }
 }

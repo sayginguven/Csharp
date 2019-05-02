@@ -18,10 +18,8 @@ namespace CSharpProject
             //Loops.body();
             //ArraysLibrary.body();
             //Functions.body();
-            
+
         }
-
-
 
     }
 }
