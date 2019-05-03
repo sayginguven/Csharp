@@ -19,14 +19,8 @@ namespace CSharpProject
             //ArraysLibrary.body();
             //Functions.body();
 
+            Functions.game();
 
-            for (int i = 0; i < 10_000; i++)
-            {
-                if (Functions.isPerfectNumber(i)) {
-                    Console.WriteLine(i);
-                }
-
-            }
         }
 
     }
