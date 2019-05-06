@@ -18,8 +18,28 @@ namespace CSharpProject
             //Loops.body();
             //ArraysLibrary.body();
             //Functions.body();
+            //Functions.game();
 
-            Functions.game();
+            Backpack myBackpack = new Backpack();
+
+            myBackpack.setMaterial("fabric");
+            myBackpack.setPocket(5);
+            myBackpack.setColor("black");
+            myBackpack.setSize("large");
+            myBackpack.setWeight(10.6);
+            myBackpack.setHaveWheels(false);
+
+            myBackpack.printTheObjectProperties();
+
+            Backpack girlsBackpack = new Backpack();
+            girlsBackpack.setMaterial("plastic");
+            girlsBackpack.setPocket(2);
+            girlsBackpack.setColor("pink");
+            girlsBackpack.setSize("small");
+            girlsBackpack.setWeight(3.6);
+            girlsBackpack.setHaveWheels(true);
+
+            girlsBackpack.printTheObjectProperties();
 
         }
 
