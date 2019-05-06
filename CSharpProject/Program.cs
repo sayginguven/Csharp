@@ -20,26 +20,18 @@ namespace CSharpProject
             //Functions.body();
             //Functions.game();
 
-            Backpack myBackpack = new Backpack();
+            Backpack mybackpack = new Backpack();
+            //material doesnt have the set method 
+            //you can not set Material
+            //mybackpack.Material = "fabric";
+            mybackpack.Pocket = 5;
+            mybackpack.Size = "medium";
+            mybackpack.Weight = 5.5;
+            mybackpack.Havewheels = false;
+            mybackpack.Color = "redish brown";
 
-            myBackpack.setMaterial("fabric");
-            myBackpack.setPocket(5);
-            myBackpack.setColor("black");
-            myBackpack.setSize("large");
-            myBackpack.setWeight(10.6);
-            myBackpack.setHaveWheels(false);
+           
 
-            myBackpack.printTheObjectProperties();
-
-            Backpack girlsBackpack = new Backpack();
-            girlsBackpack.setMaterial("plastic");
-            girlsBackpack.setPocket(2);
-            girlsBackpack.setColor("pink");
-            girlsBackpack.setSize("small");
-            girlsBackpack.setWeight(3.6);
-            girlsBackpack.setHaveWheels(true);
-
-            girlsBackpack.printTheObjectProperties();
 
         }
 

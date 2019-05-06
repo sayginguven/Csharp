@@ -8,101 +8,46 @@ namespace CSharpProject
 {
     class Backpack
     {
+        //just get method 
+        public string Material { get; }
 
-        //to be able to reach properties we need access modifiers
-        //public is for outside of this class
-        private string _material;
-        private int _pocket;
-        private string _color;
-        private string _size;
-        /// <summary>
-        /// this is pound
-        /// </summary>
-        private double _weight;
-        private bool _havewheels;
+        //just set method
+        public int Pocket {
+            set {
+                Pocket = value;
+            }
+            //no get
+        }
+        //modified get
+        public string Color {
+            get{
+                Color += "!";
+                return Color;
+            }
+            set {
+                Color = value;
+            }
 
-        //traditional way
-        //getters and setters
-
-        //_material
-        public void setMaterial(string material) {
-            _material = material;
         }
 
-        public string getMaterial() {
-            return _material;
-        }
-        //_pocket
-        public void setPocket(int pocket)
-        {
-            _pocket = pocket;
-        }
-
-        public int getPocket()
-        {
-            return _pocket;
-        }
-
-        //_color
-        public void setColor(string color)
-        {
-            _color = color;
-        }
-
-        public string getColor()
-        {
-            return _color;
-        }
-
-        //_size
-        public void setSize(string size)
-        {
-            _size = size;
-        }
-
-        public string getSize()
-        {
-            return _size;
-        }
-
-        //_weight
-        public void setWeight(double weight)
-        {
-            _weight = weight;
-        }
-
-        public double getWeight()
-        {
-            return _weight;
-        }
-
-
-        //_havewheels
-        public void setHaveWheels(bool haveWheels)
-        {
-            _havewheels = haveWheels;
-        }
-
-        public bool getHaveWheels()
-        {
-            return _havewheels;
-        }
+        //auto get and set
+        public string Size { get; set; }
+        public double Weight { get; set; }
+        public bool Havewheels { get; set;  }
 
 
         /// <summary>
         /// prints all object properties in a order
         /// </summary>
-        public void printTheObjectProperties() {
-
-            Console.WriteLine($" material : {getMaterial()} \n" +
-                $"pocket size : {getPocket()} \n" +
-                $"color : {getColor()} \n" +
-                $"size : {getSize()} \n" +
-                $"weight : {getWeight()} \n" +
-                $"haveWheels : {getHaveWheels()} \n ");
-
+        public void printTheObjectProperties()
+        {
+            Console.WriteLine($" material : {Material} \n" +
+                $"pocket size : \"private!\" \n" +
+                $"color : {Color} \n" +
+                $"size : {Size} \n" +
+                $"weight : {Weight} \n" +
+                $"haveWheels : {Havewheels} \n ");
         }
-
 
 
         //zip
