@@ -104,9 +104,200 @@ namespace CSharpProject
             {
                 Console.WriteLine($"fibonacci({i}) = {Functions.fibo(i)}");
             }
+
+            for (int i = 0; i < 10_000; i++)
+            {
+                if (Functions.isPerfectNumber(i))
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
         }
 
-    
+        public static int decrement1or2(int userData)
+        {
+
+
+            if (userData < 0)
+            {
+                Console.WriteLine("be positive...");
+                return 0;
+            }
+
+            if (userData == 0)
+            {
+                Console.WriteLine("YOU LOST!");
+                return -1;
+            }
+
+            if (userData == 1)
+            {
+                Console.WriteLine("I LOST");
+                return -1;
+            }
+
+            if (userData == 2)
+            {
+                Console.Write($"My number is         ");
+                printWithColor("1", ConsoleColor.Blue, ConsoleColor.White);
+                Console.WriteLine();
+                return 1;
+            }
+
+            if (userData % 3 == 0)
+            {
+                Random random = new Random();
+                int random1or2 = random.Next(1, 3);
+                int deductNumber = 0;
+                if (random1or2 == 1) deductNumber = 2;
+                if (random1or2 == 2) deductNumber = 5;
+
+                if (userData == 3) deductNumber = 2;
+
+                Console.Write($"My number is         ");
+                printWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                Console.WriteLine();
+                return userData - deductNumber;
+            }
+
+
+            //I lost just return anything
+            if (((userData - 1) % 3) == 0)
+            {
+                Random random = new Random();
+                int random1or2or3 = random.Next(1, 4);
+                int deductNumber = 0;
+                if (random1or2or3 == 1) deductNumber = 1;
+                if (random1or2or3 == 2) deductNumber = 2;
+                if (random1or2or3 == 3) deductNumber = 5;
+
+                Console.Write($"My number is         ");
+                printWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                Console.WriteLine();
+                return userData - deductNumber;
+            }
+
+
+            if (((userData + 1) % 3) == 0)
+            {
+                Console.Write($"My number is         ");
+                printWithColor((userData - 1).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                Console.WriteLine();
+                return userData - 1;
+            }
+
+            return -1;
+
+        }
+
+        public static void printWithColor(string message, ConsoleColor color, ConsoleColor colorReset)
+        {
+            Console.ForegroundColor = color;
+            Console.Write(message);
+            Console.ForegroundColor = colorReset;
+        }
+
+        public static void gameRules()
+        {
+            Console.WriteLine("\tCAN YOU BEAT MY AI?");
+            Console.WriteLine("\tTHESE ARE THE RULES");
+            Console.WriteLine("\tYou will start with a number which is greater than 50");
+            Console.Write("\tWe will decrement the number by ");
+            printWithColor("\t1 or 2 or 5\n", ConsoleColor.DarkYellow, ConsoleColor.White);
+            Console.WriteLine("\tWhoever enters 0 will lose");
+            Console.WriteLine("\n");
+        }
+
+        public static void game()
+        {
+
+            bool gameover = false;
+            bool firstRound = true;
+            int userInput = 0;
+            int computerCalculation = 0;
+            string userInputString;
+            while (!gameover)
+            {
+
+                if (firstRound)
+                {
+                    gameRules();
+                }
+
+                Console.Write("What is your number? ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                userInputString = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.White;
+                bool correctInput = int.TryParse(userInputString, out userInput);
+
+                if (userInput < 50 && firstRound && correctInput)
+                {
+                    printWithColor($"I think {userInput.ToString()} is not greater than 50. Please read the rules.\n", ConsoleColor.Red, ConsoleColor.White);
+                    continue;
+                }
+
+                if (computerCalculation - 1 == userInput || computerCalculation - 2 == userInput || computerCalculation - 5 == userInput || firstRound && correctInput)
+                {
+                    computerCalculation = decrement1or2(userInput);
+                    firstRound = false;
+                    if (computerCalculation == -1)
+                    {
+                        printWithColor("do you want to play again? Y or N : ", ConsoleColor.Green, ConsoleColor.White);
+                        string userYesNo = Console.ReadLine();
+                        if (userYesNo == "Y" || userYesNo == "y")
+                        {
+                            firstRound = true;
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Thank you");
+                            gameover = true;
+                        }
+                    }
+                }
+                else if (!correctInput)
+                {
+                    Console.Write("hmm I think ");
+                    printWithColor(userInputString, ConsoleColor.DarkRed, ConsoleColor.White);
+                    Console.WriteLine(" is not a number, try again");
+                }
+                else
+                {
+                    Console.Write($"You need to decrement {computerCalculation} by ");
+
+                    if ((computerCalculation - 5) > 0)
+                    {
+
+                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write(" or ");
+                        printWithColor("2", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write(" or ");
+                        printWithColor("5", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write($"   such as {computerCalculation - 1} or {computerCalculation - 2} or {computerCalculation - 5}");
+                    }
+                    else if ((computerCalculation - 5) < 0 && (computerCalculation - 2) > 0)
+                    {
+                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write(" or ");
+                        printWithColor("2", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write($"   such as {computerCalculation - 1} or {computerCalculation - 2} ");
+                    }
+                    else
+                    {
+                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        Console.Write($"   such as {computerCalculation - 1} :)");
+                    }
+
+
+                    Console.WriteLine();
+
+                    
+                }
+            }
+        }
+
 
         /// <summary>
         /// print the value with a selected color
