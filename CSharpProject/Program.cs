@@ -20,7 +20,6 @@ namespace CSharpProject
             //Functions.body();
             //Functions.game();
 
-            backpacktest();
 
         }
 
