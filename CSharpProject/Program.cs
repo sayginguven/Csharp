@@ -18,8 +18,20 @@ namespace CSharpProject
             //Loops.body();
             //ArraysLibrary.body();
             //Functions.body();
+            //Functions.game();
 
-            Functions.game();
+            Backpack mybackpack = new Backpack();
+            //material doesnt have the set method 
+            //you can not set Material
+            //mybackpack.Material = "fabric";
+            mybackpack.Pocket = 5;
+            mybackpack.Size = "medium";
+            mybackpack.Weight = 5.5;
+            mybackpack.Havewheels = false;
+            mybackpack.Color = "redish brown";
+
+           
+
 
         }
 

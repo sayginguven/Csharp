@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraysLibrary.cs" />
+    <Compile Include="Backpack.cs" />
     <Compile Include="ConditionalStatements.cs" />
     <Compile Include="ConvertingTypes.cs" />
     <Compile Include="Functions.cs" />
