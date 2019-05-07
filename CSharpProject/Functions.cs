@@ -115,28 +115,32 @@ namespace CSharpProject
             }
         }
 
-        public static int decrement1or2(int userData)
+        public static int decrement1or2or5(int userData)
         {
 
-
+            //negative control
             if (userData < 0)
             {
                 Console.WriteLine("be positive...");
                 return 0;
             }
 
+            // -1 GAME OVER
             if (userData == 0)
             {
                 Console.WriteLine("YOU LOST!");
                 return -1;
             }
 
+
+            //-1 GAME OVER
             if (userData == 1)
             {
                 Console.WriteLine("I LOST");
                 return -1;
             }
 
+            //computer wins
             if (userData == 2)
             {
                 Console.Write($"My number is         ");
@@ -145,6 +149,7 @@ namespace CSharpProject
                 return 1;
             }
 
+            //randomly return userData-2 or userData-5
             if (userData % 3 == 0)
             {
                 Random random = new Random();
@@ -162,7 +167,8 @@ namespace CSharpProject
             }
 
 
-            //I lost just return anything
+            //computer may lose
+            //return random number userData-1 or userData-2 or  userData-5 
             if (((userData - 1) % 3) == 0)
             {
                 Random random = new Random();
@@ -217,6 +223,7 @@ namespace CSharpProject
             int userInput = 0;
             int computerCalculation = 0;
             string userInputString;
+
             while (!gameover)
             {
 
@@ -225,21 +232,31 @@ namespace CSharpProject
                     gameRules();
                 }
 
+                //get user, output with dark green color
                 Console.Write("What is your number? ");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 userInputString = Console.ReadLine();
                 Console.ForegroundColor = ConsoleColor.White;
-                bool correctInput = int.TryParse(userInputString, out userInput);
+                bool validatedInput = int.TryParse(userInputString, out userInput);
 
-                if (userInput < 50 && firstRound && correctInput)
+
+                //starting number is 50 or more.
+                if (userInput < 50 && firstRound && validatedInput)
                 {
                     printWithColor($"I think {userInput.ToString()} is not greater than 50. Please read the rules.\n", ConsoleColor.Red, ConsoleColor.White);
                     continue;
                 }
 
-                if (computerCalculation - 1 == userInput || computerCalculation - 2 == userInput || computerCalculation - 5 == userInput || firstRound && correctInput)
+
+                //game rules and valudation control 
+                //firstRound flag will change
+                if (computerCalculation - 1 == userInput || 
+                    computerCalculation - 2 == userInput || 
+                    computerCalculation - 5 == userInput || 
+                    firstRound && validatedInput)
                 {
-                    computerCalculation = decrement1or2(userInput);
+
+                    computerCalculation = decrement1or2or5(userInput);
                     firstRound = false;
                     if (computerCalculation == -1)
                     {
@@ -257,7 +274,7 @@ namespace CSharpProject
                         }
                     }
                 }
-                else if (!correctInput)
+                else if (!validatedInput)
                 {
                     Console.Write("hmm I think ");
                     printWithColor(userInputString, ConsoleColor.DarkRed, ConsoleColor.White);
@@ -267,9 +284,10 @@ namespace CSharpProject
                 {
                     Console.Write($"You need to decrement {computerCalculation} by ");
 
+
+                    //print the hint for user
                     if ((computerCalculation - 5) > 0)
                     {
-
                         printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write(" or ");
                         printWithColor("2", ConsoleColor.Red, ConsoleColor.White);
