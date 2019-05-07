@@ -8,29 +8,9 @@ namespace CSharpProject
 {
     class Backpack
     {
-        //just get method 
         public string Material { get; }
-
-        //just set method
-        public int Pocket {
-            set {
-                Pocket = value;
-            }
-            //no get
-        }
-        //modified get
-        public string Color {
-            get{
-                Color += "!";
-                return Color;
-            }
-            set {
-                Color = value;
-            }
-
-        }
-
-        //auto get and set
+        public int Pocket { get; set; }
+        public string Color { get; set; }
         public string Size { get; set; }
         public double Weight { get; set; }
         public bool Havewheels { get; set;  }
@@ -41,7 +21,7 @@ namespace CSharpProject
         /// </summary>
         public void printTheObjectProperties()
         {
-            Console.WriteLine($" material : {Material} \n" +
+            Console.WriteLine($"material : {Material} \n" +
                 $"pocket size : \"private!\" \n" +
                 $"color : {Color} \n" +
                 $"size : {Size} \n" +
