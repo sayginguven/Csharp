@@ -12,6 +12,15 @@ namespace CSharpProject
         public string LastName { get; set; }
         public string Email { get; set; }
 
+        //inherited in student and teacher class
+        //base() will call the Person constructor
+        public Person()
+        {
+            Name = "jane";
+            LastName = "doe";
+            Email = "unknown";
+        }
+
         //you can override virtual methods 
         //this is optional
         //virtual methods must have a body {} or in other words implementation
