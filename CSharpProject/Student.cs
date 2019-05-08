@@ -8,12 +8,20 @@ namespace CSharpProject
 {
     class Student : Person
     {
-        public Student()
+
+        public string Program { set; get; }
+
+        public Student():base()
         {
-            Name = "";
+            Program = "n/a";
         }
 
-        public string program { set; get; }
+        public Student(string Name, string LastName, string Email, string Program)
+        {
+            this.Name = Name;
+            this.LastName = LastName;
+            this.Email = Email;
+        }
 
         public override void Sleep()
         {
@@ -25,5 +33,6 @@ namespace CSharpProject
             base.speak();
             Console.WriteLine("I am a Student");
         }
+
     }
 }

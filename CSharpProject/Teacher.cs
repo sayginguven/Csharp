@@ -9,7 +9,23 @@ namespace CSharpProject
 
     class Teacher : Person
     {
-        public string expertise { get; set; }
+       
+
+        public string Expertise { get; set; }
+
+        public Teacher() : base()
+        {
+            Expertise = "kung fu";
+        }
+
+        public Teacher(string Name, string LastName, 
+            string Email, string Expertise)
+        {
+            this.Name = Name;
+            this.LastName = LastName;
+            this.Email = Email;
+            this.Expertise = Expertise;
+        }
 
         public override void Sleep()
         {
