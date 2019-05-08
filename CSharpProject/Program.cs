@@ -10,17 +10,10 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            //Variables.body();
-            //OtherVariables.body();
-            //MathLibrary.body();
-            //ConvertingTypes.body();
-            //ConditionalStatements.body();
-            //Loops.body();
-            //ArraysLibrary.body();
-            //Functions.body();
-            //Functions.game();
-
-
+            Student student1 = new Student();
+            student1.speak();
+            Teacher teacher1 = new Teacher();
+            teacher1.speak();
         }
 
 

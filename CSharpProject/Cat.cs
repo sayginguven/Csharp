@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpProject
 {
-    class Cat
+    class Cat : ICreatures
     {
         //this is for Cat class and it can be access via the class name
         // ex: Cat.objectCount
@@ -14,7 +14,7 @@ namespace CSharpProject
         //every single constructor should increment the object count variable
         //Warning: use delegating constructors to avoid mistakes
         public static int objectCount =0;
-
+        public bool IsAlive { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
         public bool IsCute { get; set; }
@@ -22,6 +22,7 @@ namespace CSharpProject
         public int Hunger { get; set; }
         public int Energy { get; set; }
         public double Weight { get; set; }
+
         /// <summary>
         /// default const will initialize the values
         /// Name = "unknown";
@@ -141,6 +142,14 @@ namespace CSharpProject
 
         public bool isHungry() {
             return Hunger < 50;
+        }
+
+        public void Move() {
+            Console.WriteLine("I am cat I sleep I dont move");
+        }
+
+        public void Poo() {
+            Console.WriteLine("I will dig the sand and do action");
         }
 
     }
