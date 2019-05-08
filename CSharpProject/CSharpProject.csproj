@@ -58,8 +58,8 @@
     <Compile Include="ConvertingTypes.cs" />
     <Compile Include="Dog.cs" />
     <Compile Include="Functions.cs" />
-    <Compile Include="Icreatures.cs" />
-    <Compile Include="Ispecial.cs" />
+    <Compile Include="ICreatures.cs" />
+    <Compile Include="ISpecial.cs" />
     <Compile Include="Loops.cs" />
     <Compile Include="MathLibrary.cs" />
     <Compile Include="OtherVariables.cs" />

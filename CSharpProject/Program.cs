@@ -10,9 +10,11 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            Student student1 = new Student();
+            Student student1 = new Student("jose", "ferreira", "jose@jose.ca", "general programming");
             student1.speak();
             Teacher teacher1 = new Teacher();
+            Console.WriteLine(teacher1.Name);
+            Console.WriteLine(teacher1.Expertise);
             teacher1.speak();
         }
 
