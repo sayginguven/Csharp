@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-//using System.Text;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpProject
@@ -10,12 +10,19 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            Student student1 = new Student("jose", "ferreira", "jose@jose.ca", "general programming");
-            student1.speak();
-            Teacher teacher1 = new Teacher();
-            Console.WriteLine(teacher1.Name);
-            Console.WriteLine(teacher1.Expertise);
-            teacher1.speak();
+
+            Brazilian jose = new Brazilian();
+            jose.eat();
+
+            Korean daniel = new Korean();
+            daniel.eat();
+
+            Persian siamak = new Persian();
+            siamak.eat();
+
+       
+
+
         }
 
 

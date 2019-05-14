@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpProject
 {
-    abstract class Person
+    public abstract class Person
     {
         public string Name { get; set; }
         public string LastName { get; set; }
@@ -19,6 +19,10 @@ namespace CSharpProject
             Name = "jane";
             LastName = "doe";
             Email = "unknown";
+        }
+
+        public virtual void eat() {
+            Console.WriteLine("I am a person and I eat something");
         }
 
         //you can override virtual methods 

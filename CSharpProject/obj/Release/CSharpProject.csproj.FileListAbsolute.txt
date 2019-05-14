@@ -1,0 +1,5 @@
+/Users/saygin.guven/Documents/CSharp/Csharp/CSharpProject/obj/Release/CSharpProject.csproj.CoreCompileInputs.cache
+/Users/saygin.guven/Documents/CSharp/Csharp/CSharpProject/obj/Release/CSharpProject.csprojAssemblyReference.cache
+/Users/saygin.guven/Documents/CSharp/Csharp/CSharpProject/bin/Release/CSharpProject.exe.config
+/Users/saygin.guven/Documents/CSharp/Csharp/CSharpProject/bin/Release/CSharpProject.exe
+/Users/saygin.guven/Documents/CSharp/Csharp/CSharpProject/obj/Release/CSharpProject.exe
