@@ -11,16 +11,46 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
-            Brazilian jose = new Brazilian();
-            jose.eat();
 
-            Korean daniel = new Korean();
-            daniel.eat();
+            Person jose = new Brazilian();
+            //cast to Brazilian
+            //(jose as Brazilian).PlaySoccer();
 
-            Persian siamak = new Persian();
-            siamak.eat();
+            Person daniel = new Korean();
+            //cast to Korean
+            //(daniel as Korean).KickAss();
 
-       
+
+            Person siamak = new Persian();
+            //cast to Persian
+            //(siamak as Persian).RuleTheWorld();
+
+            Person[] perArr = {
+                jose,
+                daniel,
+                siamak
+            };
+
+            foreach (Person person in perArr)
+            {
+                person.Eat();
+
+                if (person is Brazilian)
+                {
+                    ((Brazilian)person).PlaySoccer();
+                }
+                if (person is Korean)
+                {
+                    ((Korean)person).KickAss();
+                }
+                if (person is Persian)
+                {
+                    ((Persian)person).RuleTheWorld();
+                }
+
+            }
+
+
 
 
         }

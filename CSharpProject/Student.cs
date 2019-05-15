@@ -28,9 +28,9 @@ namespace CSharpProject
             Console.WriteLine("zzz zzz hrrr zzz");
         }
 
-        public override void speak()
+        public override void Speak()
         {
-            base.speak();
+            base.Speak();
             Console.WriteLine("I am a Student");
         }
 

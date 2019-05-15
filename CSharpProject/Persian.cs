@@ -8,10 +8,15 @@ namespace CSharpProject
             Console.WriteLine("I sleep like a Persian");
         }
 
-        public override void eat()
+        public override void Eat()
         {
-            base.eat();
+            base.Eat();
             Console.WriteLine("I am Persian and I eat kebab");
+        }
+
+        public void RuleTheWorld()
+        {
+            Console.WriteLine("We are strong hahahaha");
         }
 
 

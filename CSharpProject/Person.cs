@@ -21,14 +21,15 @@ namespace CSharpProject
             Email = "unknown";
         }
 
-        public virtual void eat() {
+        public virtual void Eat()
+        {
             Console.WriteLine("I am a person and I eat something");
         }
 
         //you can override virtual methods 
         //this is optional
         //virtual methods must have a body {} or in other words implementation
-        public virtual void speak() {
+        public virtual void Speak() {
             Console.WriteLine("Hello I am person");
         }
 

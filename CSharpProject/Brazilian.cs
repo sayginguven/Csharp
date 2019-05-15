@@ -9,10 +9,15 @@ namespace CSharpProject
             Console.WriteLine("I am sleeping like a brazilian");
         }
 
-        public override void eat()
+        public override void Eat()
         {
-            base.eat();
+            base.Eat();
             Console.WriteLine("I am a Brazilian and I eat feijoada");
+        }
+
+        public void PlaySoccer()
+        {
+            Console.WriteLine("I am playing soccer like pro");
         }
 
     }

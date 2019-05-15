@@ -32,9 +32,9 @@ namespace CSharpProject
             Console.WriteLine("zzz");
         }
 
-        public override void speak()  
+        public override void Speak()  
         {
-            base.speak();
+            base.Speak();
             Console.WriteLine("I am a Teacher");
         }
         
