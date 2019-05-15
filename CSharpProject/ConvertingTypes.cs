@@ -8,7 +8,7 @@ namespace CSharpProject
 {
     class ConvertingTypes
     {
-        public static void body() {
+        public static void Body() {
 
 
             //string to integer
