@@ -8,10 +8,13 @@ namespace CSharpProject
 {
     class ConditionalStatements
     {
-        public static void body() {
+        public static void Body() {
+
+            //change the tests in the if statements to be able to run the code
+            bool test = false;
 
             //birth year calculator based on age
-            if (!true) {
+            if (test) {
                 string userInput;
                 Console.Write("how old are you? ");
                 userInput = Console.ReadLine();
@@ -49,7 +52,7 @@ namespace CSharpProject
             }
 
             //and or operators 
-            if (!true) {
+            if (test) {
                 //And operator &&
                 //Or operator ||
                 string weather = "rainy";
@@ -97,7 +100,7 @@ namespace CSharpProject
             }
 
             //random number and guess game
-            if (!true) {
+            if (test) {
                 //create a random number between 1 - 10
                 Random rndnumber = new Random();
                 int computerNumber = rndnumber.Next(1, 10);
@@ -133,7 +136,7 @@ namespace CSharpProject
             }
 
             //switch statement and when case
-            if (!true) {
+            if (test) {
                 Console.WriteLine("menu");
                 Console.WriteLine("1- option 1");
                 Console.WriteLine("2- option 2");
@@ -254,7 +257,7 @@ namespace CSharpProject
             }
 
             //ternary operator
-            if (!true) {
+            if (test) {
                 // ? : operator
                 // short if
 
