@@ -11,12 +11,50 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            PolymorphismTest();
 
-            Hashtable hashtab = new Hashtable();
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+
 
         }
+        public static void DictionaryTest() {
+            Dictionary<string, string> dict = new Dictionary<string, string>() {
+                {"unique key","this is a value associated with unique key"}
+            };
+
+            dict.Add("business", "an occupation, profession, or trade");
+
+            Console.WriteLine(dict["business"]);
+            Console.WriteLine(dict["unique key"]);
+
+            dict.Add("one", "first number");
+            dict.Remove("one");
+
+
+            Dictionary<int, string> indexDict = new Dictionary<int, string>() {
+                {0, "zero"},
+                {1, "one"},
+                {100, "one hundred"}
+            };
+
+            Console.WriteLine(indexDict[0]);
+
+            foreach (var item in indexDict)
+            {
+                Console.WriteLine($"{item.Key} : {item.Value}");
+            }
+            KeyValuePair<int, string> searchThis = new KeyValuePair<int, string>(1, "one");
+
+            Console.WriteLine("seach 1 - one, result : " + indexDict.Contains(searchThis));
+            Console.WriteLine("search 2 - two, result : " + indexDict.Contains(new KeyValuePair<int, string>(2, "two")));
+
+
+            Console.WriteLine("key 1 ? : " + indexDict.ContainsKey(1));
+            Console.WriteLine("key 2 ? : " + indexDict.ContainsKey(2));
+
+
+            Console.WriteLine("value one ? : " + indexDict.ContainsValue("one"));
+            Console.WriteLine("value two ? : " + indexDict.ContainsValue("two"));
+        }
+
 
         public static void ArrayListTest() {
             ArrayList arrList = new ArrayList() { "1", 1, true, 0.5,false, Math.PI };
