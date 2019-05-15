@@ -13,7 +13,7 @@ namespace CSharpProject
         //its just an example and not implemented
         //every single constructor should increment the object count variable
         //Warning: use delegating constructors to avoid mistakes
-        public static int objectCount =0;
+        public static int objectCount = 0;
         public bool IsAlive { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
@@ -47,9 +47,7 @@ namespace CSharpProject
         }
 
         //overloaded constructor
-        public Cat(string name, string color, 
-            bool iscute, double bodyLength, 
-            int energy, int hunger, double weight) {
+        public Cat(string name, string color, bool iscute, double bodyLength, int energy, int hunger, double weight) {
 
             Name = name;
             Color = color;
@@ -84,7 +82,7 @@ namespace CSharpProject
         {
         }
 
-        public double jump() {
+        public double Jump() {
             if (Energy >= 6)
             {
                 Energy -= 5;
@@ -98,7 +96,7 @@ namespace CSharpProject
             }
         }
 
-        public void sleep() {
+        public void Sleep() {
             if (Energy < 100)
             {
                 Energy += 20;
@@ -114,7 +112,7 @@ namespace CSharpProject
             }
         }
 
-        public void eat() {
+        public void Eat() {
             if (Hunger < 100)
             {
                 Console.WriteLine("I am eating cat food");
@@ -134,13 +132,13 @@ namespace CSharpProject
             }
         }
 
-        public void sound() {
+        public void Sound() {
             Console.WriteLine("meow");
             Energy -= 1;
             Hunger -= 1;
         }
 
-        public bool isHungry() {
+        public bool Ishungry() {
             return Hunger < 50;
         }
 
