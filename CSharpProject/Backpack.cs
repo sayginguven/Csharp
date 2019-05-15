@@ -19,7 +19,7 @@ namespace CSharpProject
         /// <summary>
         /// prints all object properties in a order
         /// </summary>
-        public void printTheObjectProperties()
+        public void PrintTheObjectProperties()
         {
             Console.WriteLine($"material : {Material} \n" +
                 $"pocket size : \"private!\" \n" +
@@ -28,11 +28,6 @@ namespace CSharpProject
                 $"weight : {Weight} \n" +
                 $"haveWheels : {Havewheels} \n ");
         }
-
-
-        //zip
-        //carry
-        //production date
 
     }
 }
