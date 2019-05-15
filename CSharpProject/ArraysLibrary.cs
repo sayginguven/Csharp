@@ -188,7 +188,7 @@ namespace CSharpProject
             };
 
                 //print all elements
-                Functions.greetings("jaggedArrString and these are my elements", ConsoleColor.Blue);
+                Functions.Greetings("jaggedArrString and these are my elements", ConsoleColor.Blue);
                 for (int j = 0; j < jaggedArrString.Length; j++)
                 {
                     for (int i = 0; i < jaggedArrString[j].Length; i++)

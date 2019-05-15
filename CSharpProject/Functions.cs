@@ -8,66 +8,66 @@ namespace CSharpProject
 {
     class Functions
     {
-        public static void body() {
+        public static void Body() {
 
             //calling methods with different argumets
-            greetings("saygin");
+            Greetings("saygin");
             //passing the second argument instead of using the default parameter
-            greetings("siamak", ConsoleColor.Blue);
+            Greetings("siamak", ConsoleColor.Blue);
 
             //another example for methods with default parameters
-            sayWelcome("mike");
-            sayWelcome("wade", "UBC");
+            SayWelcome("mike");
+            SayWelcome("wade", "UBC");
 
 
             //using methods with a return value
             //return value will not print (usually) developer needs to print
-            Console.WriteLine("my add function with 5 and 10 is " + add(5, 10)); // 15;
-            Console.WriteLine("my multiply function with 5 and 10 is " + multiply(5, 10));//  50
-            Console.WriteLine("my subtract function with 5 and 10 is " + subtract(5, 10));//  -5
-            Console.WriteLine("my divide function with 5 and 10 is " + divide(5, 10));//  50
+            Console.WriteLine("my add function with 5 and 10 is " + Add(5, 10)); // 15;
+            Console.WriteLine("my multiply function with 5 and 10 is " + Multiply(5, 10));//  50
+            Console.WriteLine("my subtract function with 5 and 10 is " + Subtract(5, 10));//  -5
+            Console.WriteLine("my divide function with 5 and 10 is " + Divide(5, 10));//  50
 
             //add(4,5) return 9, divide(20,10) return 2
             //multiply(9,2) return 18
-            Console.WriteLine(multiply(add(4, 5), divide(20, 10)));
+            Console.WriteLine(Multiply(Add(4, 5), Divide(20, 10)));
 
             //using the params parameter in the add method
-            add(1,2,3,4,5,6,7);
-            Console.WriteLine(add(1, 2, 3, 5, 19));
+            Add(1,2,3,4,5,6,7);
+            Console.WriteLine(Add(1, 2, 3, 5, 19));
 
             //printing the numbers to words 
             //one two three
             Console.WriteLine("numberToWords(123) : ");
-            numberToWords(123);
+            NumberToWords(123);
             Console.WriteLine();
 
             //one zero one zero
             Console.WriteLine("numberToWords(1010) : ");
-            numberToWords(1010);
+            NumberToWords(1010);
             Console.WriteLine();
 
             //one zero zero zero
             Console.WriteLine("numberToWords(1000) : ");
-            numberToWords(1000);
+            NumberToWords(1000);
             Console.WriteLine();
 
 
             //invalid value
             Console.WriteLine("numberToWords(-12) : ");
-            numberToWords(-12);
+            NumberToWords(-12);
             Console.WriteLine();
 
-            goodbye("everybody");
+            Goodbye("everybody");
 
             //pass by value
             int number1 = 10;
             Console.WriteLine($"before calling the function the number value is {number1}");
-            Console.WriteLine($"the value inside the function is {Functions.incrementTheValue(number1)}");
+            Console.WriteLine($"the value inside the function is {Functions.IncrementTheValue(number1)}");
             Console.WriteLine($"after calling the function the number value is {number1}");
 
             double balance = 1000;
             Console.WriteLine($"before calling the function the balance is {balance}");
-            Console.WriteLine($"the value inside the function is {Functions.transferTenDolars(ref balance)}");
+            Console.WriteLine($"the value inside the function is {Functions.TransferTenDolars(ref balance)}");
             Console.WriteLine($"after ccalling the function the balance is {balance}");
 
 
@@ -78,15 +78,16 @@ namespace CSharpProject
 
             double pi2 = 3.141592d;
             //Console.WriteLine(Math.PI);
-            Console.WriteLine(calculateCircleArea(rad, pi));//pi is 3 
-            Console.WriteLine(calculateCircleArea(rad, pi2));// more precise result
+            Console.WriteLine(CalculateCircleArea(rad, pi));//pi is 3 
+            Console.WriteLine(CalculateCircleArea(rad, pi2));// more precise result
 
             //thats a constant value 
             const string ipNumber = "199.23.243.103";
+            Console.WriteLine($"ip number is {ipNumber}");
             //ipNumber = ""; // compile error
 
             int studentId;
-            giveAnId(out studentId);
+            GiveAnId(out studentId);
             studentId = 101;//you can modify later its not a constant value
             Console.WriteLine(studentId);
 
@@ -95,19 +96,19 @@ namespace CSharpProject
             //ref specifies that this parameter is passed by reference and may be read or written by the called method.
             //out specifies that this parameter is passed by reference and is written by the called method.
 
-            Console.WriteLine($"The factorial(-10) is {Functions.factorial(-10)}");
-            Console.WriteLine($"The factorial(1) is {Functions.factorial(1)}");
-            Console.WriteLine($"The factorial(2) is {Functions.factorial(2)}");
-            Console.WriteLine($"The factorial(10) is {Functions.factorial(10)}");
+            Console.WriteLine($"The factorial(-10) is {Factorial(-10)}");
+            Console.WriteLine($"The factorial(1) is {Factorial(1)}");
+            Console.WriteLine($"The factorial(2) is {Factorial(2)}");
+            Console.WriteLine($"The factorial(10) is {Factorial(10)}");
 
             for (int i = 0; i < 50; i++)
             {
-                Console.WriteLine($"fibonacci({i}) = {Functions.fibo(i)}");
+                Console.WriteLine($"fibonacci({i}) = {Functions.Fibo(i)}");
             }
 
             for (int i = 0; i < 10_000; i++)
             {
-                if (Functions.isPerfectNumber(i))
+                if (Functions.IsPerfectNumber(i))
                 {
                     Console.WriteLine(i);
                 }
@@ -115,7 +116,7 @@ namespace CSharpProject
             }
         }
 
-        public static int decrement1or2or5(int userData)
+        public static int Decrement1or2or5(int userData)
         {
 
             //negative control
@@ -144,7 +145,7 @@ namespace CSharpProject
             if (userData == 2)
             {
                 Console.Write($"My number is         ");
-                printWithColor("1", ConsoleColor.Blue, ConsoleColor.White);
+                PrintWithColor("1", ConsoleColor.Blue, ConsoleColor.White);
                 Console.WriteLine();
                 return 1;
             }
@@ -161,7 +162,7 @@ namespace CSharpProject
                 if (userData == 3) deductNumber = 2;
 
                 Console.Write($"My number is         ");
-                printWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                PrintWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
                 Console.WriteLine();
                 return userData - deductNumber;
             }
@@ -179,7 +180,7 @@ namespace CSharpProject
                 if (random1or2or3 == 3) deductNumber = 5;
 
                 Console.Write($"My number is         ");
-                printWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                PrintWithColor((userData - deductNumber).ToString(), ConsoleColor.Blue, ConsoleColor.White);
                 Console.WriteLine();
                 return userData - deductNumber;
             }
@@ -188,7 +189,7 @@ namespace CSharpProject
             if (((userData + 1) % 3) == 0)
             {
                 Console.Write($"My number is         ");
-                printWithColor((userData - 1).ToString(), ConsoleColor.Blue, ConsoleColor.White);
+                PrintWithColor((userData - 1).ToString(), ConsoleColor.Blue, ConsoleColor.White);
                 Console.WriteLine();
                 return userData - 1;
             }
@@ -197,25 +198,25 @@ namespace CSharpProject
 
         }
 
-        public static void printWithColor(string message, ConsoleColor color, ConsoleColor colorReset)
+        public static void PrintWithColor(string message, ConsoleColor color, ConsoleColor colorReset)
         {
             Console.ForegroundColor = color;
             Console.Write(message);
             Console.ForegroundColor = colorReset;
         }
 
-        public static void gameRules()
+        public static void GameRules()
         {
             Console.WriteLine("\tCAN YOU BEAT MY AI?");
             Console.WriteLine("\tTHESE ARE THE RULES");
             Console.WriteLine("\tYou will start with a number which is greater than 50");
             Console.Write("\tWe will decrement the number by ");
-            printWithColor("\t1 or 2 or 5\n", ConsoleColor.DarkYellow, ConsoleColor.White);
+            PrintWithColor("\t1 or 2 or 5\n", ConsoleColor.DarkYellow, ConsoleColor.White);
             Console.WriteLine("\tWhoever enters 0 will lose");
             Console.WriteLine("\n");
         }
 
-        public static void game()
+        public static void Game()
         {
 
             bool gameover = false;
@@ -229,7 +230,7 @@ namespace CSharpProject
 
                 if (firstRound)
                 {
-                    gameRules();
+                    GameRules();
                 }
 
                 //get user, output with dark green color
@@ -243,7 +244,7 @@ namespace CSharpProject
                 //starting number is 50 or more.
                 if (userInput < 50 && firstRound && validatedInput)
                 {
-                    printWithColor($"I think {userInput.ToString()} is not greater than 50. Please read the rules.\n", ConsoleColor.Red, ConsoleColor.White);
+                    PrintWithColor($"I think {userInput.ToString()} is not greater than 50. Please read the rules.\n", ConsoleColor.Red, ConsoleColor.White);
                     continue;
                 }
 
@@ -256,11 +257,11 @@ namespace CSharpProject
                     firstRound && validatedInput)
                 {
 
-                    computerCalculation = decrement1or2or5(userInput);
+                    computerCalculation = Decrement1or2or5(userInput);
                     firstRound = false;
                     if (computerCalculation == -1)
                     {
-                        printWithColor("do you want to play again? Y or N : ", ConsoleColor.Green, ConsoleColor.White);
+                        PrintWithColor("do you want to play again? Y or N : ", ConsoleColor.Green, ConsoleColor.White);
                         string userYesNo = Console.ReadLine();
                         if (userYesNo == "Y" || userYesNo == "y")
                         {
@@ -277,7 +278,7 @@ namespace CSharpProject
                 else if (!validatedInput)
                 {
                     Console.Write("hmm I think ");
-                    printWithColor(userInputString, ConsoleColor.DarkRed, ConsoleColor.White);
+                    PrintWithColor(userInputString, ConsoleColor.DarkRed, ConsoleColor.White);
                     Console.WriteLine(" is not a number, try again");
                 }
                 else
@@ -288,23 +289,23 @@ namespace CSharpProject
                     //print the hint for user
                     if ((computerCalculation - 5) > 0)
                     {
-                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("1", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write(" or ");
-                        printWithColor("2", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("2", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write(" or ");
-                        printWithColor("5", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("5", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write($"   such as {computerCalculation - 1} or {computerCalculation - 2} or {computerCalculation - 5}");
                     }
                     else if ((computerCalculation - 5) < 0 && (computerCalculation - 2) > 0)
                     {
-                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("1", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write(" or ");
-                        printWithColor("2", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("2", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write($"   such as {computerCalculation - 1} or {computerCalculation - 2} ");
                     }
                     else
                     {
-                        printWithColor("1", ConsoleColor.Red, ConsoleColor.White);
+                        PrintWithColor("1", ConsoleColor.Red, ConsoleColor.White);
                         Console.Write($"   such as {computerCalculation - 1} :)");
                     }
 
@@ -322,7 +323,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="name">user name</param>
         /// <param name="color">default parameter color is white</param>
-        public static void greetings(string name, ConsoleColor color = ConsoleColor.White)
+        public static void Greetings(string name, ConsoleColor color = ConsoleColor.White)
         {
             Console.ForegroundColor = color;
             Console.WriteLine($"hello my name is {name}");
@@ -334,7 +335,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="name">user name</param>
         /// <param name="school">default parameter is ITD</param>
-        public static void sayWelcome(string name, string school = "ITD")
+        public static void SayWelcome(string name, string school = "ITD")
         {
             Console.WriteLine($"hello {name}, welcome to {school}");
         }
@@ -347,7 +348,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static double add(double a, double b)
+        public static double Add(double a, double b)
         {
             return a + b;
         }
@@ -361,7 +362,7 @@ namespace CSharpProject
         /// <param name="b"></param>
         /// <param name="c"></param>
         /// <returns></returns>
-        public static double add(double a, double b, double c)
+        public static double Add(double a, double b, double c)
         {
             return a + b + c;
         }
@@ -372,7 +373,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="args">list of double values</param>
         /// <returns></returns>
-        public static double add(params double[] args)
+        public static double Add(params double[] args)
         {
 
             StringBuilder sb = new StringBuilder();
@@ -399,7 +400,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static double multiply(double a, double b)
+        public static double Multiply(double a, double b)
         {
             return a * b;
         }
@@ -410,7 +411,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static double subtract(double a, double b)
+        public static double Subtract(double a, double b)
         {
             return a - b;
         }
@@ -421,7 +422,7 @@ namespace CSharpProject
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static double divide(double a, double b)
+        public static double Divide(double a, double b)
         {
             return a / b;
         }
@@ -432,7 +433,7 @@ namespace CSharpProject
         /// 123 -> one two three
         /// </summary>
         /// <param name="number"></param>
-        public static void numberToWords(int number)
+        public static void NumberToWords(int number)
         {
 
             if (number < 0)
@@ -442,8 +443,8 @@ namespace CSharpProject
             else
             {
 
-                int numberDigit = getDigitCount(number);
-                int reversedNumber = reverse(number);
+                int numberDigit = GetDigitCount(number);
+                int reversedNumber = Reverse(number);
 
                 for (int i = 0; i < numberDigit; i += 1)
                 {
@@ -495,7 +496,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static int getDigitCount(int number)
+        public static int GetDigitCount(int number)
         {
             if (number < 0)
             {
@@ -525,7 +526,7 @@ namespace CSharpProject
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static int reverse(int number)
+        public static int Reverse(int number)
         {
 
             int reverse = 0;
@@ -561,35 +562,35 @@ namespace CSharpProject
         }
 
         //one line of scope alternative method
-        public static void goodbye(string str) => Console.WriteLine("goodbye " + str);
+        public static void Goodbye(string str) => Console.WriteLine("goodbye " + str);
 
 
         //pass by value
-        public static int incrementTheValue(int a) {
+        public static int IncrementTheValue(int a) {
             a += 1;
             return a;
         }
         //pass by reference
-        public static double transferTenDolars(ref double money) {
+        public static double TransferTenDolars(ref double money) {
             money -= 10.0;
             return money;
         }
 
         //pi value is constant will not change
-        public static double calculateCircleArea(double radius, in double pi)
+        public static double CalculateCircleArea(double radius, in double pi)
         {
             return pi * radius * radius;
         }
 
         //id must be initialized inside the method
-        public static void giveAnId(out int id)
+        public static void GiveAnId(out int id)
         {
             id = 100;
         }
 
 
         //recursive functions
-        public static int factorial(int number) {
+        public static int Factorial(int number) {
             if (number <= 0) {
                 return -1;
 
@@ -597,12 +598,12 @@ namespace CSharpProject
                 return 1;
             }
             else {
-                return number * factorial(number - 1);
+                return number * Factorial(number - 1);
             }
         }
 
         //fibonacci series
-        public static long fibo(int number) {
+        public static long Fibo(int number) {
 
             if (number == 0) {
                 return 0;
@@ -612,11 +613,11 @@ namespace CSharpProject
                 return 1;
             }
 
-            return fibo(number - 1) + fibo(number - 2);
+            return Fibo(number - 1) + Fibo(number - 2);
 
         }
 
-        public static int addArrayElements(int[] arr) {
+        public static int AddArrayElements(int[] arr) {
 
             int sum = 0;
 
@@ -628,7 +629,7 @@ namespace CSharpProject
             return sum;
         }
 
-        public static void printFactors(int n) {
+        public static void PrintFactors(int n) {
 
             if (n < 1) {
                 Console.WriteLine("Invalid Value");
@@ -642,7 +643,7 @@ namespace CSharpProject
             }
         }
 
-        public static bool isPerfectNumber(int n) {
+        public static bool IsPerfectNumber(int n) {
             if (n < 1) return false;
             if (n == 1) return true;
             
@@ -655,7 +656,7 @@ namespace CSharpProject
             else return false;
         }
 
-        public static bool isPrime(int number) {
+        public static bool IsPrime(int number) {
             //TODO implement this
             return false;
         }

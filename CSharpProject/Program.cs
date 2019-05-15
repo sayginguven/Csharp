@@ -160,7 +160,7 @@ namespace CSharpProject
             mybackpack.Havewheels = false;
             mybackpack.Color = "redish brown";
 
-            mybackpack.printTheObjectProperties();
+            mybackpack.PrintTheObjectProperties();
         }
 
         public static void Cattest() {
@@ -169,35 +169,35 @@ namespace CSharpProject
 
 
             Console.WriteLine($"before jumping weight: {cat1.Weight}");
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
             Console.WriteLine($"after jumping weight: {cat1.Weight}");
 
             Console.WriteLine($"before sleep energy: {cat1.Energy}");
-            cat1.sleep();
+            cat1.Sleep();
             Console.WriteLine($"after sleep energy: {cat1.Energy}");
 
             //cat1.sleep();
             //cat1.sleep();
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
-            cat1.jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
+            cat1.Jump();
 
             Console.WriteLine($"before eat energy: {cat1.Energy}");
             Console.WriteLine($"before eat hunger: {cat1.Hunger}");
-            cat1.eat();
+            cat1.Eat();
             Console.WriteLine($"after eat energy: {cat1.Energy}");
             Console.WriteLine($"after eat hunger: {cat1.Hunger}");
 
 
-            cat1.sound();
+            cat1.Sound();
             cat1.Hunger = 10;
-            Console.WriteLine($"{cat1.Name} is hungry? {(cat1.isHungry() ? "YES" : "NO")}");
+            Console.WriteLine($"{cat1.Name} is hungry? {(cat1.Ishungry() ? "YES" : "NO")}");
 
             Cat defaultCat = new Cat();
 
