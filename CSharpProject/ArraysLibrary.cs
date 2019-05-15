@@ -10,8 +10,11 @@ namespace CSharpProject
     {
         public static void body() {
 
+            //change the tests in the if statements to be able to run the code
+            bool test = true;
+
             //read line and sruare root the number
-            if (!true)
+            if (!test)
             {
                 Console.WriteLine("give me a number");
                 string a = Console.ReadLine();
@@ -20,7 +23,7 @@ namespace CSharpProject
             }
 
             //array
-            if (!true)
+            if (!test)
             {
                 //create a students array
                 string[] students = { "siamak", "sina", "daniel", "jose",
@@ -88,7 +91,7 @@ namespace CSharpProject
             }
 
             //multidimensional  array
-            if (!true)
+            if (!test)
             {
                 //multidimensional arrays
                 //2d array                y,x
@@ -138,7 +141,7 @@ namespace CSharpProject
             }
             
             //initilize 2d array
-            if (!true)
+            if (!test)
             {
                 float[,] floarArr = new float[2, 5];
 
@@ -167,7 +170,7 @@ namespace CSharpProject
             }
 
             //jagged array
-            if (!true)
+            if (!test)
             {
                 //creating jagged array
                 //its not 2d array, its array of arrays [ [], [] ,[] ]
