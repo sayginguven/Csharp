@@ -12,9 +12,58 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
+            Rollerblade myRollerblade = new Rollerblade();
 
+            Console.WriteLine("my rollerblade color is : " + myRollerblade.Color ); // white
+            List<Wheels> wheelsInMyRollerBlade = myRollerblade.Wheel;
+
+            Console.WriteLine("\n");
+
+            Console.WriteLine( "my rollerblade has " + wheelsInMyRollerBlade.Count + " wheels");
+            Console.WriteLine( "my rollerblade's brand is " + myRollerblade.Brand  );
+            Console.WriteLine( "my rollerblade's material is " + myRollerblade.Material );
+            Console.WriteLine( "my rollerblade's color is " + myRollerblade.Color );
+
+            myRollerblade.Color = "purple";
+
+            Console.WriteLine("\n");
+
+
+            Console.WriteLine("my rollerblade's color is " + myRollerblade.Color);
+
+            //foreach (var item in wheelsInMyRollerBlade)
+            //{
+            //    Console.WriteLine( item.Material  );
+            //    Console.WriteLine( item.Performance );
+            //}
+
+            Console.WriteLine("wheelsInMyRollerBlade's first wheel bearing type is " +
+                wheelsInMyRollerBlade[0].Bearing.Type );
+
+            Console.WriteLine("does my wheelsInMyRollerBlade need maintanance? : " +
+                wheelsInMyRollerBlade[0].Bearing.Lubricate());
+
+            Console.WriteLine( "the speed of my rollerblade is " + myRollerblade.Accelerate("10 km/h") );
+
+            Console.WriteLine("\n");
+
+
+            Console.WriteLine("does my wheelsInMyRollerBlade need maintanance? : ");
+
+            int count = 1;
+            foreach (var item in myRollerblade.Wheel)
+            {
+
+                Console.WriteLine("number " + count + " " + item.Bearing.Lubricate());
+                count += 1;
+            }
 
         }
+
+
+
+
+
         public static void DictionaryTest() {
             Dictionary<string, string> dict = new Dictionary<string, string>() {
                 {"unique key","this is a value associated with unique key"}

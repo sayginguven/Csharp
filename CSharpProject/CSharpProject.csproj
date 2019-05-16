@@ -71,6 +71,9 @@
     <Compile Include="Brazilian.cs" />
     <Compile Include="Korean.cs" />
     <Compile Include="Persian.cs" />
+    <Compile Include="Rollerblade.cs" />
+    <Compile Include="Wheels.cs" />
+    <Compile Include="Bearing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
