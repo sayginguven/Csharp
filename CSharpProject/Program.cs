@@ -12,8 +12,6 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
-            RollerbladeTest();
-
 
         }
 
@@ -75,6 +73,8 @@ namespace CSharpProject
                 Console.WriteLine("number " + count + " " + item.Bearing.NeedsLubricate());
                 count += 1;
             }
+
+            myRollerblade.Brake();
         }
 
 
