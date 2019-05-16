@@ -13,9 +13,70 @@ namespace CSharpProject
         {
 
 
+            queueAndStackTest();
+
+        }
+
+        #region my main function with some tests
+
+        public static void queueAndStackTest() {
+
+            Queue<Rollerblade> myQueue = new Queue<Rollerblade>();
+            Stack<Rollerblade> myStack = new Stack<Rollerblade>();
+
+
+            Rollerblade r1 = new Rollerblade("plastic", "red", 10, "pro", "noname",
+               new List<Wheels>() { new Wheels(), new Wheels() });
+
+            Rollerblade r2 = new Rollerblade(
+                "super plastic",
+                "pink",
+                11,
+                "beginner",
+                "firefly",
+              new List<Wheels>() {
+                new Wheels("composit","low",new Bearing(12,false, "speed","steel")),
+                new Wheels("composit","low",new Bearing(12,false, "speed","steel")),
+                new Wheels("composit","low",new Bearing(12,false, "speed","steel"))
+                }
+            );
+
+            Rollerblade r3 = new Rollerblade();
+            Rollerblade r4 = new Rollerblade(
+                "jelly plastic",
+                "black",
+                12,
+                "advanced",
+                "noname",
+              new List<Wheels>() {
+                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium")),
+                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium")),
+                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium"))
+                }
+            );
+
+            myQueue.Enqueue(r1);
+            myQueue.Enqueue(r2);
+            myQueue.Enqueue(r3);
+            myQueue.Enqueue(r4);
+            myQueue.Dequeue();
+
+            Console.WriteLine("how many objects I have in myQueue " + myQueue.Count);
+            Console.WriteLine(myQueue.Peek().Wheel[0].Bearing.Material);
+
+            myStack.Push(r1);
+            myStack.Push(r2);
+            myStack.Push(r3);
+            myStack.Push(r4);
+            myStack.Pop();
+
+            Console.WriteLine("how many objects I have in myStack " + myStack.Count);
+
+            Console.WriteLine(myStack.Peek().Wheel[0].Bearing.Material);
         }
 
         public static void RollerbladeTest() {
+
             Rollerblade myRollerblade = new Rollerblade();
 
             Console.WriteLine("my rollerblade color is : " + myRollerblade.Color); // white
@@ -77,9 +138,6 @@ namespace CSharpProject
             myRollerblade.Brake();
         }
 
-
-
-
         public static void DictionaryTest() {
             Dictionary<string, string> dict = new Dictionary<string, string>() {
                 {"unique key","this is a value associated with unique key"}
@@ -119,7 +177,6 @@ namespace CSharpProject
             Console.WriteLine("value one ? : " + indexDict.ContainsValue("one"));
             Console.WriteLine("value two ? : " + indexDict.ContainsValue("two"));
         }
-
 
         public static void ArrayListTest() {
             ArrayList arrList = new ArrayList() { "1", 1, true, 0.5,false, Math.PI };
@@ -313,5 +370,7 @@ namespace CSharpProject
             Cat deadCat = new Cat("zombie", "zombie grey", false, 45d, 500, 50, 26);
             Console.WriteLine(deadCat.Energy);
         }
+
+        #endregion
     }
 }

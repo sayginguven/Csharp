@@ -9,7 +9,7 @@ namespace CSharpProject
         public string Material { get; set; }
 
         public Bearing()
-            :this(10, false,"roller bearing","metal")
+            :this(10, false,"roller bearing","copper")
         {
 
         }
