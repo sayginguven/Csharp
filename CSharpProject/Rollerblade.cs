@@ -40,6 +40,15 @@ namespace CSharpProject
             return speed;
         }
 
+        public void DoMaintanceForBearings() {
+
+            foreach (var item in Wheel)
+            {
+                item.Bearing.Sound = false;
+            }
+
+        }
+
         public void Brake() {
             Console.WriteLine("Rollerblade stopped");
         }

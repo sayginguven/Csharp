@@ -22,11 +22,11 @@ namespace CSharpProject
             Material = material;
         }
 
-        public string Lubricate() {
+        public string NeedsLubricate() {
 
            return Sound ? "please lubricate it!" : "everything is good, no lubrication is required.";
+            }
 
-        }
 
     }
 }

@@ -12,17 +12,23 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
+            RollerbladeTest();
+
+
+        }
+
+        public static void RollerbladeTest() {
             Rollerblade myRollerblade = new Rollerblade();
 
-            Console.WriteLine("my rollerblade color is : " + myRollerblade.Color ); // white
+            Console.WriteLine("my rollerblade color is : " + myRollerblade.Color); // white
             List<Wheels> wheelsInMyRollerBlade = myRollerblade.Wheel;
 
             Console.WriteLine("\n");
 
-            Console.WriteLine( "my rollerblade has " + wheelsInMyRollerBlade.Count + " wheels");
-            Console.WriteLine( "my rollerblade's brand is " + myRollerblade.Brand  );
-            Console.WriteLine( "my rollerblade's material is " + myRollerblade.Material );
-            Console.WriteLine( "my rollerblade's color is " + myRollerblade.Color );
+            Console.WriteLine("my rollerblade has " + wheelsInMyRollerBlade.Count + " wheels");
+            Console.WriteLine("my rollerblade's brand is " + myRollerblade.Brand);
+            Console.WriteLine("my rollerblade's material is " + myRollerblade.Material);
+            Console.WriteLine("my rollerblade's color is " + myRollerblade.Color);
 
             myRollerblade.Color = "purple";
 
@@ -38,12 +44,12 @@ namespace CSharpProject
             //}
 
             Console.WriteLine("wheelsInMyRollerBlade's first wheel bearing type is " +
-                wheelsInMyRollerBlade[0].Bearing.Type );
+                wheelsInMyRollerBlade[0].Bearing.Type);
 
             Console.WriteLine("does my wheelsInMyRollerBlade need maintanance? : " +
-                wheelsInMyRollerBlade[0].Bearing.Lubricate());
+                wheelsInMyRollerBlade[0].Bearing.NeedsLubricate());
 
-            Console.WriteLine( "the speed of my rollerblade is " + myRollerblade.Accelerate("10 km/h") );
+            Console.WriteLine("the speed of my rollerblade is " + myRollerblade.Accelerate("10 km/h"));
 
             Console.WriteLine("\n");
 
@@ -54,12 +60,22 @@ namespace CSharpProject
             foreach (var item in myRollerblade.Wheel)
             {
 
-                Console.WriteLine("number " + count + " " + item.Bearing.Lubricate());
+                Console.WriteLine("number " + count + " " + item.Bearing.NeedsLubricate());
                 count += 1;
             }
 
-        }
+            myRollerblade.DoMaintanceForBearings();
 
+            Console.WriteLine("\n");
+
+            Console.WriteLine("after maintanance : ");
+            count = 1;
+            foreach (var item in myRollerblade.Wheel)
+            {
+                Console.WriteLine("number " + count + " " + item.Bearing.NeedsLubricate());
+                count += 1;
+            }
+        }
 
 
 
