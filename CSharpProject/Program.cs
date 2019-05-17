@@ -12,14 +12,35 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
-
-            queueAndStackTest();
+            Cups<string, int> mycup = new Cups
+                <string, int>("black", 5, 2);
+            mycup.PrintTheCup();
 
         }
 
+        public static void PrintMessage<T>(T msg) {
+            Console.WriteLine(msg);
+        }
+
+        public static double Add<T>(T a, T b) {
+            return Convert.ToDouble(a) + Convert.ToDouble(b);
+        }
+
+        public static void PrintSpecial<T1,T2>(T1 count, T2 msg) {
+
+            for (int i = 0; i < Convert.ToInt32(count); i++)
+            {
+                Console.WriteLine((i+1).ToString() + " - " + msg.ToString());
+            }
+
+        }
+
+
+
+
         #region my main function with some tests
 
-        public static void queueAndStackTest() {
+        public static void QueueAndStackTest() {
 
             Queue<Rollerblade> myQueue = new Queue<Rollerblade>();
             Stack<Rollerblade> myStack = new Stack<Rollerblade>();

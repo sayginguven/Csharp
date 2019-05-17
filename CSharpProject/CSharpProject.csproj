@@ -74,6 +74,7 @@
     <Compile Include="Structures\OtherVariables.cs" />
     <Compile Include="Structures\Variables.cs" />
     <Compile Include="Structures\Backpack.cs" />
+    <Compile Include="Cups.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
