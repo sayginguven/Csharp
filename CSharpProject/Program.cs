@@ -12,6 +12,15 @@ namespace CSharpProject
         static void Main(string[] args)
         {
 
+
+
+            QueueAndStackTest();
+
+            RollerbladeTest();
+
+
+            Console.WriteLine("\n\n");
+
             Cups<string, int> mycup = new Cups
                 <string, int>("black", 5, 2);
             mycup.PrintTheCup();
@@ -42,37 +51,63 @@ namespace CSharpProject
 
         public static void QueueAndStackTest() {
 
-            Queue<Rollerblade> myQueue = new Queue<Rollerblade>();
-            Stack<Rollerblade> myStack = new Stack<Rollerblade>();
+            Queue<Rollerblade<int, string>> myQueue = new Queue<Rollerblade<int, string>>();
+            Stack<Rollerblade<int, string>> myStack = new Stack<Rollerblade<int, string>>();
 
 
-            Rollerblade r1 = new Rollerblade("plastic", "red", 10, "pro", "noname",
-               new List<Wheels>() { new Wheels(), new Wheels() });
-
-            Rollerblade r2 = new Rollerblade(
-                "super plastic",
-                "pink",
-                11,
-                "beginner",
-                "firefly",
-              new List<Wheels>() {
-                new Wheels("composit","low",new Bearing(12,false, "speed","steel")),
-                new Wheels("composit","low",new Bearing(12,false, "speed","steel")),
-                new Wheels("composit","low",new Bearing(12,false, "speed","steel"))
+            Rollerblade<int, string> r1 = new Rollerblade<int, string>(
+                "plastic",
+                "blue",
+                10,
+                "intermediate",
+                "noname",
+              new List<Wheels<string>>() {
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper"))
                 }
             );
 
-            Rollerblade r3 = new Rollerblade();
-            Rollerblade r4 = new Rollerblade(
+
+            //do not use this
+            Rollerblade<int, string> willCreateNullException = new Rollerblade<int, string>();
+
+
+            Rollerblade<int, string>  r2 = new Rollerblade<int, string>(
                 "jelly plastic",
                 "black",
                 12,
                 "advanced",
                 "noname",
-              new List<Wheels>() {
-                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium")),
-                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium")),
-                new Wheels("rubber","high",new Bearing(12,false, "race","aluminium"))
+              new List<Wheels<string>>() {
+                new Wheels<string>("composite","high",new Bearing<int,bool, string>(12,false, "race","aluminium - carbon")),
+                new Wheels<string>("composite","high",new Bearing<int,bool, string>(12,false, "race","aluminium - carbon")),
+                new Wheels<string>("composite","high",new Bearing<int,bool, string>(12,false, "race","aluminium - carbon"))
+                }
+            );
+
+            Rollerblade<int, string> r3 = new Rollerblade<int, string>(
+                "jelly plastic",
+                "black",
+                12,
+                "advanced",
+                "noname",
+              new List<Wheels<string>>() {
+                new Wheels<string>("plastic","low",new Bearing<int,bool, string>(10,false, "speed","steel")),
+                new Wheels<string>("plastic","low",new Bearing<int,bool, string>(10,false, "speed","steel")),
+                new Wheels<string>("plastic","low",new Bearing<int,bool, string>(10,false, "speed","steel"))
+                }
+            );
+            Rollerblade<int, string> r4 = new Rollerblade<int, string>(
+                "jelly plastic",
+                "black",
+                12,
+                "advanced",
+                "noname",
+              new List<Wheels<string>>() {
+                new Wheels<string>("rubber","high",new Bearing<int,bool, string>(9,false, "race","aluminium")),
+                new Wheels<string>("rubber","high",new Bearing<int,bool, string>(9,false, "race","aluminium")),
+                new Wheels<string>("rubber","high",new Bearing<int,bool, string>(9,false, "race","aluminium"))
                 }
             );
 
@@ -98,10 +133,22 @@ namespace CSharpProject
 
         public static void RollerbladeTest() {
 
-            Rollerblade myRollerblade = new Rollerblade();
+            Rollerblade<int, string> myRollerblade = new Rollerblade<int, string>(
+                "plastic",
+                "blue",
+                10,
+                "intermediate",
+                "noname",
+              new List<Wheels<string>>() {
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper"))
+                }
+            );
+
 
             Console.WriteLine("my rollerblade color is : " + myRollerblade.Color); // white
-            List<Wheels> wheelsInMyRollerBlade = myRollerblade.Wheel;
+            List<Wheels<string>> wheelsInMyRollerBlade = myRollerblade.Wheel;
 
             Console.WriteLine("\n");
 

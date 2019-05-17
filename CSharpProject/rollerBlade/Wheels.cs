@@ -1,20 +1,19 @@
 ﻿using System;
 namespace CSharpProject
 {
-    public class Wheels
+    public class Wheels<T>
     {
 
-        public string Material { get; set; }
-        public string Performance { get; set; }
-        public Bearing Bearing { get; set; }
+        public T Material { get; set; }
+        public T Performance { get; set; }
+        public Bearing<int, bool, string> Bearing { get; set; }
 
         public Wheels()
-            :this("rubber", "amateur", new Bearing())
         {
 
         }
 
-        public Wheels(string material, string performance, Bearing bearing) {
+        public Wheels(T material, T performance, Bearing<int, bool, string> bearing) {
             Material = material;
             Performance = performance;
             Bearing = bearing;

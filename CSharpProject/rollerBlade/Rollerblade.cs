@@ -3,24 +3,22 @@ using System.Collections.Generic;
 
 namespace CSharpProject
 {
-    public class Rollerblade
+    public class Rollerblade<T1,T3>
     {
-        public string Material { get; private set; } 
-        public string Color { get; set; }
-        public int Size { get; set; }
-        public string Type { get; set; }
-        public string Brand { get; private set; }
-        public List<Wheels> Wheel { get; set; }
+        public T3 Material { get; private set; } 
+        public T3 Color { get; set; }
+        public T1 Size { get; set; }
+        public T3 Type { get; set; }
+        public T3 Brand { get; private set; }
+        public List<Wheels<string>> Wheel { get; set; }
 
         public Rollerblade()
-            : this("plastic", "white", 10, "race", "firefly" ,
-                  new List<Wheels>() { new Wheels(), new Wheels(), new Wheels(), new Wheels() } )
         {
 
         }
 
-        public Rollerblade(string material, string color, int size, 
-                           string type, string brand, List<Wheels> wheel)
+        public Rollerblade(T3 material, T3 color, T1 size, 
+                           T3 type, T3 brand, List<Wheels<string>> wheel)
         {
             Material = material;
             Color = color;
@@ -30,14 +28,14 @@ namespace CSharpProject
             Wheel = wheel;
         }
 
-        public string Accelerate(string speed = "5 km/h") {
+        public string Accelerate(T3 speed ) {
         
             foreach (var item in Wheel)
             {
                 item.Bearing.Sound = true;
             }
 
-            return speed;
+            return speed.ToString();
         }
 
         public void DoMaintanceForBearings() {
