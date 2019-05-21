@@ -4,27 +4,102 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace CSharpProject
 {
     class Program
     {
-        static void Main(string[] args)
+
+        static void Main(string[] args){
+
+            //Cat cat1 = new Cat();
+            //string JSONcat = JsonConvert.SerializeObject(cat1);
+            //Console.WriteLine(JSONcat);
+
+
+            WebClient LondonObj = new WebClient();
+            string result = LondonObj.DownloadString(
+                "http://api.openweathermap.org/data/2.5/weather?q=Astana &appid=5a14851e7a7b812c16d430b322cf27e3");
+            dynamic csharpObj = JsonConvert.DeserializeObject<dynamic>(result);
+
+            //Console.WriteLine(csharpObj["name"]);
+
+
+            Console.WriteLine($"Location : {csharpObj["name"]} \n" +
+            	$"The weather is : {csharpObj["weather"][0]["description"]}\n"+
+                $"The max temp is : {csharpObj["main"]["temp_max"] - 273.15} C\n"+
+                $"The min temp is : {csharpObj["main"]["temp_min"] - 273.15} C\n"
+           );
+
+
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+           dtDateTime = dtDateTime.AddSeconds(1558442014).ToLocalTime();
+
+
+            Console.WriteLine("Sunrise : " + dtDateTime);
+
+            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(1558496476).ToLocalTime();
+
+            Console.WriteLine("Sunset : " + dtDateTime);
+
+
+        }
+
+
+
+
+        #region later check
+
+        public class Human
         {
+            public string Name { get; set; }
+            public string LastName { get; set; }
+            public string Email { get; set; }
+        }
+
+        public static void later() {
+
+            Rollerblade<int, string> r1 = new Rollerblade<int, string>(
+                    "plastic",
+                    "blue",
+                    10,
+                    "intermediate",
+                    "noname",
+                  new List<Wheels<string>>() {
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
+                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper"))
+                    }
+                );
 
 
+            string str = JsonConvert.SerializeObject(r1);
 
-            QueueAndStackTest();
+            Console.WriteLine(str);
 
-            RollerbladeTest();
+            Console.WriteLine("\n\n\n\n");
+
+            WebClient client = new WebClient();
+            string webstr = client.DownloadString("http://www.json-generator.com/api/json/get/ckNtUCMGmq?indent=2");
+
+            Human Michael = JsonConvert.DeserializeObject<Human>(webstr);
+
+            Console.WriteLine(Michael.Name);
+            Console.WriteLine(Michael.LastName);
+            Console.WriteLine(Michael.Email);
+        }
+        #endregion
 
 
+        public static void Cuptest() {
             Console.WriteLine("\n\n");
 
             Cups<string, int> mycup = new Cups
                 <string, int>("black", 5, 2);
             mycup.PrintTheCup();
-
         }
 
         public static void PrintMessage<T>(T msg) {

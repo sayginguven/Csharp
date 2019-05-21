@@ -19,3 +19,6 @@ C:/Users/saygin.guven/Documents/CSharpProject/CSharpProject/obj/Debug/CSharpProj
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/CSharpProject.exe.config
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/CSharpProject.exe
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/CSharpProject.pdb
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/Newtonsoft.Json.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/Newtonsoft.Json.xml
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/obj/Debug/CSharpProject.csproj.CopyComplete
