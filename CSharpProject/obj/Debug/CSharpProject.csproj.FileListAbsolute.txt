@@ -22,3 +22,17 @@ C:/Users/saygin.guven/Documents/CSharpProject/CSharpProject/obj/Debug/CSharpProj
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/Newtonsoft.Json.dll
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/Newtonsoft.Json.xml
 /Users/saygin.guven/Documents/project/Csharp/CSharpProject/obj/Debug/CSharpProject.csproj.CopyComplete
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Data.Common.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Globalization.Extensions.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.IO.Compression.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Net.Http.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Net.Sockets.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Security.SecureString.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Threading.Overlapped.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/bin/Debug/Weather.dll
+/Users/saygin.guven/Documents/project/Csharp/CSharpProject/obj/Debug/CSharpProject.exe.config

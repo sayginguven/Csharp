@@ -11,6 +11,7 @@ namespace CSharpProject
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+        public abstract string Address { get; set; }
 
         //inherited in student and teacher class
         //base() will call the Person constructor

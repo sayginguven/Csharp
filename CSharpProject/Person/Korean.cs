@@ -3,6 +3,14 @@ namespace CSharpProject
 {
     public class Korean : Person
     {
+        public override string Address
+        {
+
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+
+        }
+
         public override void Eat()
         {
             base.Eat();

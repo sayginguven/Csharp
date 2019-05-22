@@ -18,6 +18,14 @@ namespace CSharpProject
             Expertise = "kung fu";
         }
 
+        public override string Address
+        {
+
+            get => throw new Exception("ops address is not set for teacher");
+            set => throw new Exception();
+
+        }
+
         public Teacher(string Name, string LastName, 
             string Email, string Expertise)
         {

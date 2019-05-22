@@ -13,86 +13,104 @@ namespace CSharpProject
     {
 
         static void Main(string[] args){
-
-            //Cat cat1 = new Cat();
-            //string JSONcat = JsonConvert.SerializeObject(cat1);
-            //Console.WriteLine(JSONcat);
-
-
-            WebClient LondonObj = new WebClient();
-            string result = LondonObj.DownloadString(
-                "http://api.openweathermap.org/data/2.5/weather?q=Astana &appid=5a14851e7a7b812c16d430b322cf27e3");
-            dynamic csharpObj = JsonConvert.DeserializeObject<dynamic>(result);
-
-            //Console.WriteLine(csharpObj["name"]);
-
-
-            Console.WriteLine($"Location : {csharpObj["name"]} \n" +
-            	$"The weather is : {csharpObj["weather"][0]["description"]}\n"+
-                $"The max temp is : {csharpObj["main"]["temp_max"] - 273.15} C\n"+
-                $"The min temp is : {csharpObj["main"]["temp_min"] - 273.15} C\n"
-           );
-
-
-            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-           dtDateTime = dtDateTime.AddSeconds(1558442014).ToLocalTime();
-
-
-            Console.WriteLine("Sunrise : " + dtDateTime);
-
-            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-            dtDateTime = dtDateTime.AddSeconds(1558496476).ToLocalTime();
-
-            Console.WriteLine("Sunset : " + dtDateTime);
-
-
+            //code...
         }
 
+        public static void ExceptionTest() {
+
+            Teacher t1 = new Teacher();
+
+            try
+            {
+                Console.WriteLine(t1.Address);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
+            int[] arr = new int[10];
 
-        #region later check
+            for (int i = 0; i <= arr.Length; i += 1)
+            {
+                try
+                {
+                    Console.WriteLine("give me an integer value");
+                    int value = Convert.ToInt16(Console.ReadLine());
+                    arr[i] = value;
 
-        public class Human
-        {
-            public string Name { get; set; }
-            public string LastName { get; set; }
-            public string Email { get; set; }
+                }
+                catch (IndexOutOfRangeException myerror)
+                {
+                    Console.WriteLine("oops there is an error I guess you are out of range");
+                    Console.WriteLine(myerror.Message);
+                }
+                catch (FormatException myerror)
+                {
+                    Console.WriteLine("oops there is an error I guess that is not an integer!");
+                    Console.WriteLine(myerror.Message);
+
+                }
+                //finally {
+                //    Console.WriteLine("this will run anyway!");
+                //}
+            }
+
+            //exceptions
+            double a = 1;
+            double b = 1;
+
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("give me a number");
+                    a = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("give me another number");
+                    b = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine($"{a} divided by {b} : {Functions.Divide(a, b)}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
         }
 
-        public static void later() {
+        public static void WeatherTest() {
+            WebClient weatherObj1 = new WebClient();
 
-            Rollerblade<int, string> r1 = new Rollerblade<int, string>(
-                    "plastic",
-                    "blue",
-                    10,
-                    "intermediate",
-                    "noname",
-                  new List<Wheels<string>>() {
-                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
-                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper")),
-                new Wheels<string>("rubber","mid",new Bearing<int,bool, string>(15,false, "speed","cupper"))
-                    }
-                );
+            try
+            {
+                string vancouverJSON = weatherObj1.DownloadString(
+                "http://api.openweathermap.org/data/2.5/forecast?q=Vancouver,CA&appid=5a14851e7a7b812c16d430b322cf27e3");
+                OpenWeather vancouverCSharp = JsonConvert.DeserializeObject<OpenWeather>(vancouverJSON);
+                //for 5 days forecast
+                //you can use PrintListInfo method
+                vancouverCSharp.PrintListInfo();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
-            string str = JsonConvert.SerializeObject(r1);
 
-            Console.WriteLine(str);
+           
 
-            Console.WriteLine("\n\n\n\n");
+           
 
-            WebClient client = new WebClient();
-            string webstr = client.DownloadString("http://www.json-generator.com/api/json/get/ckNtUCMGmq?indent=2");
-
-            Human Michael = JsonConvert.DeserializeObject<Human>(webstr);
-
-            Console.WriteLine(Michael.Name);
-            Console.WriteLine(Michael.LastName);
-            Console.WriteLine(Michael.Email);
+            //for one day
+            //one json file
+            WebClient weatherObj2 = new WebClient();
+            string burnabyJSON = weatherObj2.DownloadString("http://api.openweathermap.org/data/2.5/weather?q=Burnaby,CA&appid=5a14851e7a7b812c16d430b322cf27e3");
+            OpenWeather burnabyCSharp = JsonConvert.DeserializeObject<OpenWeather>(burnabyJSON);
+            burnabyCSharp.PrintDetails();
         }
-        #endregion
-
 
         public static void Cuptest() {
             Console.WriteLine("\n\n");

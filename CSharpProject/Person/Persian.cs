@@ -3,6 +3,14 @@ namespace CSharpProject
 {
     public class Persian : Person
     {
+        public override string Address
+        {
+
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+
+        }
+
         public override void Sleep()
         {
             Console.WriteLine("I sleep like a Persian");
