@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net;
+using System.Threading;
 
 namespace CSharpProject
 {
@@ -14,10 +15,128 @@ namespace CSharpProject
 
         static void Main(string[] args){
 
-            //code here...
+            //synchronized
+            //PrintHello();
+            //PrintHi();
+
+            ////asynchronized
+            //Thread t1 = new Thread(Print1);
+            //Thread t2 = new Thread(Print0);
+
+            //t1.Start();
+            //t2.Start();
+            //CountDown();
+
+            //lambda statement
+            //double TakeTheValueAndSquareIt(double x) => Math.Pow(x, 2);
+            //string SayHi() => "hi";
+
+            //Console.WriteLine(  TakeTheValueAndSquareIt(5d) );
+            //Console.WriteLine(SayHi());
+
+            //new Thread(() =>
+            //{
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        Console.WriteLine("hello");
+            //    }
+
+            //}).Start();
+
+            //Console.WriteLine("main starts");
+
+            //Thread t1 = new Thread(Print1);
+            //Thread t2 = new Thread(Print0);
+
+            //t1.Start();
+            //t2.Start();
+
+            ////this will join to main
+            //t1.Join();
+            //t2.Join();
+
+            //Console.WriteLine("main ends");
+
+            //Counter c1 = new Counter();
+
+            //Thread t01 = new Thread(c1.Count1);
+            //Thread t02 = new Thread(c1.Count2);
+            //Thread t03 = new Thread(c1.Count3);
+
+            //t01.Start();
+            //t02.Start();
+            //t03.Start();
+
+            string name= "";
+            Thread t1 = new Thread(()=> {
+
+                Console.WriteLine("What is you name");
+                name = Console.ReadLine();
+            });
+            t1.Start();
+
+            Thread t2 = new Thread(()=> {
+
+                for (int i = 0; i < 10; i++)
+                {
+                    Thread.Sleep(4000);
+                    if(name == "") {
+                        Console.WriteLine("I can not wait you forever!!!");
+
+                    }
+                    else {
+                        Console.WriteLine($"welcome {name}");
+                        Functions.Game();
+                        Thread.CurrentThread.Abort();
+                        break;
+                    }
+
+                }
+
+            });
+            t2.Start();
+
+            Thread.Sleep(40000);
+            t2.Abort();
+
+            Console.WriteLine("is t1 alive " + t1.IsAlive);
+            Console.WriteLine("is t2 alive " + t2.IsAlive);
 
 
+        }
 
+
+        static void SayHello() {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("hi");
+            }
+        }
+
+        static void CountDown() {
+
+            for (int i = 10; i > 0; i-=1)
+            {
+                Console.WriteLine(i);
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("blast off!!!");
+
+        }
+
+        static void Print0() {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("0");
+            }
+        }
+
+        static void Print1()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("1");
+            }
         }
 
         static void JsonHeroTest() {
@@ -29,7 +148,29 @@ namespace CSharpProject
             Hero hero1 = JsonConvert.DeserializeObject<Hero>(result);
 
             hero1.IntroduceYourself();
-        }
+
+
+            //if json link dies use this
+            //{
+            //"weapons": [
+            //  "sword",
+            //  "helmet",
+            //  "boots"
+            //], 
+            //"mana": 50, 
+            //"hp": 100, 
+            //"status": {
+            //"agility": 57, 
+            //"strenght": 510, 
+            //"speed": {
+            //"runSpeed": 100, 
+            //"walkSpeed": 40
+            //}
+            //}, 
+            //"name": "warrior"
+            //}
+
+        }   
 
 
         public static void ExceptionTest() {
