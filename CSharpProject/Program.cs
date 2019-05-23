@@ -13,8 +13,24 @@ namespace CSharpProject
     {
 
         static void Main(string[] args){
-            //code...
+
+            //code here...
+
+
+
         }
+
+        static void JsonHeroTest() {
+            WebClient client = new WebClient();
+
+            string result = client.DownloadString("http://www.json-generator.com/api/json/get/bTCmNHDqiG?indent=2");
+
+            //dynamic csharpObj = JsonConvert.DeserializeObject(result);
+            Hero hero1 = JsonConvert.DeserializeObject<Hero>(result);
+
+            hero1.IntroduceYourself();
+        }
+
 
         public static void ExceptionTest() {
 

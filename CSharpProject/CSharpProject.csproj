@@ -82,6 +82,7 @@
     <Compile Include="Structures\Backpack.cs" />
     <Compile Include="Cups.cs" />
     <Compile Include="OpenWeather.cs" />
+    <Compile Include="Hero.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
